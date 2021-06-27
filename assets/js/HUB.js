@@ -35,10 +35,10 @@ var activeCID = "";
 var collectives = {};
 
 //// phuture ///// 
-collectives[0] = { id : "Wem1e" , members: [ "Wem1e", "DBxA9" , "epyGn" , "nogRn" , "n08jM", "no6ve", "LxJqY", "D7Mgn", "no2B5", "nZa4e", "epzvz", "n1OXD", "L5z7D" ]};
+collectives[0] = { id : "Wem1e" , members: [ "DBxA9" , "epyGn" , "nogRn" , "n08jM", "no6ve", "LxJqY", "D7Mgn", "no2B5", "nZa4e", "epzvz", "n1OXD", "L5z7D" ]};
 
 ///// SRS /////
-collectives[1] = { id : "aARVA" , members: [ "aARVA", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k"]};
+collectives[1] = { id : "aARVA" , members: [ "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k"]};
 
 
 var members = [];
@@ -211,6 +211,7 @@ function onLoad(data){
 
 
 Hub.innerHTML = "";
+drawCollective(data);
    
 var localmembers = members[data.id]
 var arrayLength = members[data.id].length;
@@ -287,6 +288,45 @@ function analysis(data){
     usertracks[userid] = trackinfo;
     spawnCards(userinfo, trackinfo);
 
+};
+
+
+
+////// draws collective at top of HUB ////// 
+function drawCollective (data) { 
+
+    artistcount = members[activeCID].length;
+    
+
+    var headerDiv = document.createElement('div');
+    headerDiv.setAttribute('class','headerDiv');
+    headerDiv.setAttribute('id','headerDiv');
+
+var headerImg = document.createElement('img'); 
+headerImg.setAttribute("class","headerImg");
+headerImg.setAttribute('id','headerImg');
+headerImg.setAttribute('src', data.profile_picture['150x150']);
+    
+
+var headerName = document.createElement('p');
+headerName.setAttribute("class","headerName")
+headerName.setAttribute("id","headerName")
+headerName.innerHTML = data.name;
+
+var headerArtists = document.createElement('p');
+headerArtists.setAttribute('class','headerArtists');
+headerArtists.setAttribute('id','headerArtists');
+headerArtists.innerHTML = artistcount + ' artists';
+
+
+
+
+headerDiv.appendChild(headerImg);
+headerDiv.appendChild(headerName);
+headerDiv.appendChild(headerArtists);
+
+
+Hub.appendChild(headerDiv);
 };
 
 
