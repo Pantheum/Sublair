@@ -1,0 +1,37 @@
+PHUTURE COLLECTIVE: Wem1e
+
+khanda: DBxA9
+BDos: epyGn
+capshun: nogRn
+summet: n08jM
+floret: no6ve
+Fidus aka rvkit: LxJqY
+Mr. L (Carmack): D7Mgn
+rohaan: no2B5
+Diversa: nZa4e
+himmel: epzvz
+chromonicci: n1OXD
+ZenAware: L5z7D
+
+
+PHUTURE COLLECTIVE
+var collective = "Wem1e";
+var members = [ "DBxA9" , "epyGn" , "nogRn" , "n08jM", "no6ve", "LxJqY", "D7Mgn", "no2B5", "nZa4e", "epzvz", "n1OXD", "L5z7D" ];
+
+
+
+Small Room Sound: 
+
+var collective = "aARVA";
+var members = [ "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE"];
+	
+
+
+
+
+
+
+
+
+
+
