@@ -38,7 +38,7 @@ var collectives = {};
 collectives[0] = { id : "Wem1e" , members: [ "DBxA9" , "epyGn" , "nogRn" , "n08jM", "no6ve", "LxJqY", "D7Mgn", "no2B5", "nZa4e", "epzvz", "n1OXD", "L5z7D" ]};
 
 ///// SRS /////
-collectives[1] = { id : "aARVA" , members: [ "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k"]};
+collectives[1] = { id : "aARVA" , members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k"]};
 
 
 var members = [];
