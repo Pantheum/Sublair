@@ -26,6 +26,13 @@ var collective = "aARVA";
 var members = [ "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE"];
 	
 
+[SUS] Collective
+collectives[1] = { id : "n0Mvj" , members: [ "Dyxzr", "DrP38" , "emWwL" , "nZqpa", "n3AbE", "n6p8M", "n66bn", "Dy8GP", "DNYV0", "eJrke" , "LM40V" , "ebOzP", "DNzpY"]};
+
+Bonsai 
+collectives[1] = { id : "eJ7zn" , members: [ "n1ER5", "eJ58d", "LKEMw" , "DvYRV", "DOWa4", "nd3me", "eJbde", "ezkz7", "ePWYm", "nogRn", "nVPPD", "LK7oL"]};
+
+
 
 
 

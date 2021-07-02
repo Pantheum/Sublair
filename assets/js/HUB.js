@@ -21,9 +21,6 @@ var playIcon = document.getElementById("playIcon");
 
 
 
-
-
-
 var previousUID = "";
 var previousTID = "";
 
@@ -40,9 +37,21 @@ collectives[0] = { id : "Wem1e" , members: [ "DBxA9" , "epyGn" , "nogRn" , "n08j
 ///// SRS /////
 collectives[1] = { id : "aARVA" , members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k"]};
 
+///// [sus]Collective /////// 
+collectives[2] = { id : "n0Mvj" , members: [ "Dyxzr", "DrP38" , "emWwL" , "nZqpa", "n3AbE", "n6p8M", "n66bn", "Dy8GP", "DNYV0", "eJrke" , "LM40V" , "ebOzP", "DNzpY"]};
+
+////// BONSAI /////// 
+collectives[3] = { id : "eJ7zn" , members: [ "n1ER5", "eJ58d", "LKEMw" , "DvYRV", "DOWa4", "nd3me", "eJbde", "ezkz7", "ePWYm", "nogRn", "nVPPD", "LK7oL"]};
+
+
 
 var members = [];
 var usertracks = [];
+
+
+
+var colltracks = [];
+
 
 initLoad();
 
@@ -81,8 +90,6 @@ function initLoad(){
 
     arrayLength = Object.keys(collectives).length;
 
-
-
     for (var i = 0; i < arrayLength; i++) {
 
         
@@ -91,15 +98,20 @@ function initLoad(){
     
 
     Promise.all([
+
 	fetch(userURL)
+
 ]).then(function (responses) {
 	// Get a JSON object from each of the responses
 	return Promise.all(responses.map(function (response) {
 		return response.json();
 	}));
 }).then(function (data) {
-    data = data[0].data
-    collDraw(data, x);
+
+    collDraw(data[0].data);
+
+   
+    
      
 }).catch(function (error) {
 	
@@ -116,26 +128,42 @@ members[collectives[i].id] = collectives[i].members;
 
 };
 
+
+//// retry the initLoad /////
 function initRetry(url1){ 
 
     Promise.all([
         fetch(url1)
+        
     ]).then(function (responses) {
         // Get a JSON object from each of the responses
         return Promise.all(responses.map(function (response) {
             return response.json();
         }));
     }).then(function (data) {
-        data = data[0].data;
+
+
+
+        collDraw(data[0].data);
         
-            collDraw(data);
-           
+
+    
     }).catch(function (error) {
         // if there's an error, log it
         
         initRetry(url1);    
      
     });
+
+};
+
+function initanalysis(data){ 
+
+    const userinfo = data[0].data;
+    const trackinfo = data[1].data ;
+    const userid = userinfo.id
+    colltracks[userid] = trackinfo;
+    
 
 };
 
@@ -153,7 +181,8 @@ function collDraw(data){
         
 
         activeCID = data.id;
-        onLoad(data);
+        fetchArtists(data); ///// FETCHES COLLECTIVES ARTISTS AND  artist TRACKS AND DRAWS THEM 
+        fetchTracks(); //// FETCHES COLLECTIVES TRACKS
    
     });
 
@@ -178,8 +207,8 @@ function collDraw(data){
     collFollow.innerHTML =  data.follower_count + ' FOLLOWERS';
 
     collTracks = document.createElement('p')
-    collTracks.setAttribute("id","collFollow");
-    collTracks.setAttribute("class","collFollow");
+    collTracks.setAttribute("id","collTracks");
+    collTracks.setAttribute("class","collTracks");
     collTracks.innerHTML =  data.track_count + " RELEASES";
 
     collArtists = document.createElement('p')
@@ -204,9 +233,120 @@ function collDraw(data){
     
 
 
+function fetchTracks () { 
+
+const trackURL = 'https://dn2.monophonic.digital/v1/users/' + activeCID + '/tracks?';
+    
+    Promise.all([
+
+	fetch(trackURL)
+
+]).then(function (responses) {
+	// Get a JSON object from each of the responses
+	return Promise.all(responses.map(function (response) {
+		return response.json();
+	}));
+}).then(function (data) {
+
+    colltracks = data[0].data;
+
+    for (var i = 0; i < colltracks.length; i++) {
+    drawTracks(colltracks[i]);
+};
+
+clickFunction();
 
 
-function onLoad(data){
+}).catch(function (error) {
+	// if there's an error, log it
+    fetchTracks();
+    
+}); 
+    
+
+};
+
+
+
+
+function drawTracks (data) {
+
+container = document.getElementById('containerReleases');
+
+    
+
+        trdata = data;
+
+        tr_title = trdata.title;
+        tr_art =  trdata.artwork['150x150'];
+        tr_likes = trdata.favorite_count; 
+        tr_repost = trdata.repost_count;
+ 
+        localuid = trdata.user['id']; 
+        localtid = trdata.id
+
+    tr = document.createElement("div");
+    tr.setAttribute("class", "trackCard");
+    tr.setAttribute("id","trackCard");
+    tr.addEventListener ('click', function(){
+        
+        event.stopPropagation();
+        collStream(data);
+
+        
+
+
+    });
+
+    trArt =document.createElement('img');
+    trArt.setAttribute('class','trArt');
+    trArt.setAttribute('id','trArt');
+    trArt.setAttribute('src',tr_art);
+
+
+    trContainer = document.createElement('div');
+    trContainer.setAttribute('id','trContainer');
+    trContainer.setAttribute('class','trContainer');
+
+    
+
+    trtitle = document.createElement("p");    
+    trtitle.innerHTML = (tr_title);
+
+    trtrackinfo = document.createElement("table");
+    trtrackinfo.setAttribute("class","trackinfotable");
+    trtrackinfo.setAttribute("id","trackinfotable");
+
+
+    trlikes = document.createElement("th");
+    trlikes.innerHTML = '<i class="fas fa-heart"></i>' + tr_likes;
+    trlikes.style.fontSize = "12px";
+
+    trrepost = document.createElement("th");
+    trrepost.innerHTML = '<i class="fas fa-retweet"></i>' + tr_repost;
+    trrepost.style.fontSize ="12px";
+
+    trtrackinfo.appendChild(trlikes);
+    trtrackinfo.appendChild(trrepost);
+    
+    trContainer.appendChild(trtitle);
+    trContainer.appendChild(trtrackinfo);
+
+    tr.appendChild(trArt);
+    tr.appendChild(trContainer);
+
+    
+
+
+
+    container.appendChild(tr);
+
+
+};
+
+
+
+function fetchArtists(data){
 
 
 
@@ -247,7 +387,7 @@ const trackURL = 'https://dn2.monophonic.digital/v1/users/' + localmembers[i] + 
  
     
 };
-clickFunction();
+
     
 };
 
@@ -283,7 +423,7 @@ function fetch_retry( url1, url2) {
 function analysis(data){ 
 
     const userinfo = data[0].data;
-    const trackinfo = data[1].data ;
+    const trackinfo = data[1].data;
     const userid = userinfo.id
     usertracks[userid] = trackinfo;
     spawnCards(userinfo, trackinfo);
@@ -296,11 +436,42 @@ function analysis(data){
 function drawCollective (data) { 
 
     artistcount = members[activeCID].length;
+    trcount = data.track_count
     
 
     var headerDiv = document.createElement('div');
     headerDiv.setAttribute('class','headerDiv');
     headerDiv.setAttribute('id','headerDiv');
+
+    var nav = document.createElement('table');
+    nav.setAttribute('id','nav');
+    nav.setAttribute('class','nav');
+
+    var navrow = document.createElement('tr');
+
+    var navArtists= document.createElement('th');
+    navArtists.setAttribute('id','navArtists');
+    navArtists.setAttribute('class','navArtists');
+    navArtists.innerHTML = "Artists";
+    navArtists.setAttribute('onclick', 'containerClick("artists")');
+
+    var navTracks = document.createElement('th');
+    navTracks.setAttribute('id','navTracks');
+    navTracks.setAttribute('class','navTracks');
+    navTracks.innerHTML = "Releases";
+    navTracks.setAttribute('onclick', 'containerClick("releases")');
+
+
+    var navLinks = document.createElement('th');
+    navLinks.setAttribute('id','navLinks');
+    navLinks.setAttribute('class','navLinks');
+    navLinks.innerHTML = "Links ";
+    navLinks.setAttribute('onclick', 'containerClick("links")');
+
+
+    navrow.appendChild(navTracks);
+    navrow.appendChild(navArtists);
+    nav.appendChild(navrow);
 
 var headerImg = document.createElement('img'); 
 headerImg.setAttribute("class","headerImg");
@@ -316,7 +487,19 @@ headerName.innerHTML = data.name;
 var headerArtists = document.createElement('p');
 headerArtists.setAttribute('class','headerArtists');
 headerArtists.setAttribute('id','headerArtists');
-headerArtists.innerHTML = artistcount + ' artists';
+headerArtists.innerHTML = trcount + ' releases';
+
+var containerArtists = document.createElement('div');
+containerArtists.setAttribute('class','containerArtists');
+containerArtists.setAttribute('id','containerArtists');
+
+var containerReleases = document.createElement('div');
+containerReleases.setAttribute('class','containerReleases');
+containerReleases.setAttribute('id','containerReleases');
+
+var containerLinks = document.createElement('div');
+containerLinks.setAttribute('class','containerLinks');
+containerLinks.setAttribute('id','containerLinks');
 
 
 
@@ -327,11 +510,74 @@ headerDiv.appendChild(headerArtists);
 
 
 Hub.appendChild(headerDiv);
+Hub.appendChild(nav); 
+Hub.appendChild(containerArtists);
+Hub.appendChild(containerLinks);
+Hub.appendChild(containerReleases);
+
+
+
 };
 
 
 
-////// creates a div and attaches it to the 'artist hub '///////
+function containerClick (container) {
+
+    var Artists = document.getElementById('containerArtists');
+    var Releases  = document.getElementById('containerReleases');
+    var Links  = document.getElementById('containerLinks');
+
+    var nav_Tracks = document.getElementById('navTracks');
+    var nav_Artists = document.getElementById('navArtists');
+   
+
+
+    var datasummary = document.getElementById('headerArtists')
+
+    if (container == 'artists'){
+        
+
+        datasummary.innerHTML = members[activeCID].length + " Artists";
+
+        Artists.style.display = "block";
+        Releases.style.display = "none";
+       
+
+        nav_Artists.style.borderTop = "5px solid lime";
+        nav_Tracks.style.borderTop = "1px solid lime";
+       
+
+
+    };
+
+    if (container == 'releases'){
+       
+        Releases.style.display = "block";
+        
+        Artists.style.display = "none";
+
+        nav_Artists.style.borderTop = "1px solid lime";
+        nav_Tracks.style.borderTop = "5px solid lime";
+        
+
+        datasummary.innerHTML = colltracks.length + " Releases";
+
+
+    };
+
+
+
+
+    
+
+
+
+
+};
+
+
+
+////// creates a div and attaches it to the 'artists container'///////
 
 function spawnCards (userinfo, trackinfo){
 
@@ -345,6 +591,8 @@ function spawnCards (userinfo, trackinfo){
     
 
 
+        var contArtists = document.getElementById('containerArtists')
+        
 
    
     
@@ -367,10 +615,6 @@ function spawnCards (userinfo, trackinfo){
     cardName = document.createElement('p')
     cardName.setAttribute("id","cardName");
     cardName.setAttribute("class","cardName");
-    
-   
-    
-    
     
     cardFollowers = document.createElement('p')
     cardFollowers.setAttribute("id","cardFollowers");
@@ -455,10 +699,12 @@ function spawnCards (userinfo, trackinfo){
         spawnTracks(trackinfo[i],hubCard)
     };
     
-
-    Hub.appendChild(hubCard);
+    contArtists.appendChild(hubCard)
+    
     
 };
+
+///// shows the HUB on click of collective div on main menu////
 
 
 function showHUB() { 
@@ -474,7 +720,7 @@ var same = "";
     
 
 
-///// detection for open artist cards ////// 
+///// visual detection for open artist cards ////// 
 function isActive(x){
     
     if (playeractive == 1){
@@ -530,9 +776,6 @@ function spawnTracks(info, track){
     
     var x = track.querySelector("div[class='cardTracks']");
     
-    var user = info.user['name']; 
-
-    
 
     
     tr = document.createElement("div");
@@ -546,8 +789,17 @@ function spawnTracks(info, track){
         findTrack(info.user['id'],info.id, false)
 
     });
-    
-    tr.style.backdrop = "blur(10px)";
+
+    trArt =document.createElement('img');
+    trArt.setAttribute('class','trArt');
+    trArt.setAttribute('id','trArt');
+    trArt.setAttribute('src',info.artwork['150x150']);
+
+
+    trContainer = document.createElement('div');
+    trContainer.setAttribute('id','trContainer');
+    trContainer.setAttribute('class','trContainer');
+
     
 
     trtitle = document.createElement("p");    
@@ -566,23 +818,28 @@ function spawnTracks(info, track){
     trrepost.innerHTML = '<i class="fas fa-retweet"></i>' + info.repost_count
     trrepost.style.fontSize ="12px";
 
+    
+
+
     trtrackinfo.appendChild(trlikes);
     trtrackinfo.appendChild(trrepost);
 
+    trContainer.appendChild(trtitle);
+    trContainer.appendChild(trtrackinfo);
+
     
-    
-    tr.appendChild(trtitle);
-    tr.appendChild(trtrackinfo);
+    tr.appendChild(trArt);
+    tr.appendChild(trContainer);
     x.appendChild(tr);
    
 };
 
 
 
-///// gets streamable URL for track and autoplays on interface ////
+///// gets streamable URL for track and  calls the stream function ////
 function findTrack (UID,TID,Next){
 
-    var playlist = usertracks[UID];
+        var playlist = usertracks[UID];
     
     
     foundTrack = false;
@@ -591,8 +848,6 @@ function findTrack (UID,TID,Next){
             activeSong.currentTime = 0;
        
     } else {
-
-
 
     if (Next == false){
 
@@ -666,6 +921,9 @@ function findTrack (UID,TID,Next){
 };
 
 
+
+/// gets streaming url and sends track to the player ////// 
+
 function streamTrack(trackid){ 
 
     fetch('https://discoveryprovider2.audius.co/v1/tracks/'+trackid +'/stream?app_name=EXAMPLEAPP',
@@ -682,6 +940,33 @@ function streamTrack(trackid){
         playIcon.setAttribute("class","fas fa-pause");
         isPlaying = true;
         activeSong.style.display = "inline";
+        
+    });
+
+
+ };
+
+ function collStream (data){ 
+
+trackid = data.id;
+
+    fetch('https://discoveryprovider2.audius.co/v1/tracks/'+trackid +'/stream?app_name=EXAMPLEAPP',
+    {
+      method: 'GET'
+    
+    })
+    .then(function(res) {
+        
+        
+        
+        activeSong.setAttribute("src", res.url +"?nocache=");
+        activeSong.play();
+        playIcon.setAttribute("class","fas fa-pause");
+        isPlaying = true;
+        activeSong.style.display = "inline";
+
+        songTitle.innerHTML = data.title
+        songArtist.innerHTML = data.user['name'];
         
         
         
