@@ -49,7 +49,8 @@ collectives[4] = { id : "D2oRp" , members: [ "nlNjO" , "nqOPD" , "n3ARJ" , "LjNB
 /////// NYT /////// 
 collectives[5] = { id : "WQ7ao" , members: [ "Dy8GP", "nlNjO" , "DrQbO" , "L5Yz1" , "n18pd" , "eYvjv" , "WQzGK" , "DrP38" , "nQ5q4" , "eA3qL" , "LwrPb" , "LWdlj" , "lzamZ" , "em75j" , "ndm0J" , "emWwL" , "LW0vk", "LKE3y" ]};
 
-
+///// LEGION OF trap /////
+collectives[6] = { id : "MVKWZ" , members: [ "VKxWy" , "n1E5X" , "D93xM"]};
 
 var members = [];
 var usertracks = [];
@@ -972,7 +973,7 @@ trackid = data.id;
     })
     .then(function(res) {
         
-        
+        console.log(res.url);
         
         activeSong.setAttribute("src", res.url +"?nocache=");
         activeSong.play();
@@ -982,6 +983,8 @@ trackid = data.id;
 
         songTitle.innerHTML = data.title
         songArtist.innerHTML = data.user['name'];
+
+        
         
         
         
