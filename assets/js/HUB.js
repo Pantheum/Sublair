@@ -35,7 +35,7 @@ var collectives = {};
 collectives[0] = { id : "Wem1e" , members: [ "DBxA9" , "epyGn" , "nogRn" , "n08jM", "no6ve", "LxJqY", "D7Mgn", "no2B5", "nZa4e", "epzvz", "n1OXD", "L5z7D" ]};
 
 ///// SRS /////
-collectives[1] = { id : "aARVA" , members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k"]};
+collectives[1] = { id : "aARVA" , members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k", "pZEkX", ]};
 
 ///// [sus]Collective /////// 
 collectives[2] = { id : "n0Mvj" , members: [ "Dyxzr", "DrP38" , "emWwL" , "nZqpa", "n3AbE", "n6p8M", "n66bn", "Dy8GP", "DNYV0", "eJrke" , "LM40V" , "ebOzP", "DNzpY"]};
@@ -445,6 +445,13 @@ function drawCollective (data) {
     trcount = data.track_count
     
 
+    var navHome = document.createElement('p');
+    navHome.innerHTML = " < sublair";
+    navHome.setAttribute('id','navHome');
+    navHome.setAttribute('class','navHome');
+    navHome.setAttribute("onclick","reload()");
+
+
     var headerDiv = document.createElement('div');
     headerDiv.setAttribute('class','headerDiv');
     headerDiv.setAttribute('id','headerDiv');
@@ -515,6 +522,8 @@ headerDiv.appendChild(headerName);
 headerDiv.appendChild(headerArtists);
 
 
+
+Hub.appendChild(navHome); 
 Hub.appendChild(headerDiv);
 Hub.appendChild(nav); 
 Hub.appendChild(containerArtists);
@@ -1062,6 +1071,13 @@ trackid = data.id;
     findTrack(previousUID, previousTID, false);
     };
 
+ };
+
+ 
+
+
+ function reload (){ 
+location.reload();
  };
 
 

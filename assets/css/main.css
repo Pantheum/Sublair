@@ -1085,6 +1085,11 @@ border-collapse:separate;
 
 }
 
+
+.navHome:hover { 
+		cursor: pointer;
+	}
+
 .nav tr{ 
 width: 100%;
 border-bottom: 1px solid lime;
@@ -1291,6 +1296,9 @@ border-bottom-right-radius: 10px;
 		border-collapse:separate;
 		
 		}
+
+		
+		
 		
 		.nav tr{ 
 		width: 100%;
@@ -1305,12 +1313,25 @@ border-bottom-right-radius: 10px;
 			padding: 1em;
 			min-width: 5px;
 		
-			border:1px solid lime;
+			
 		
 			border-top-right-radius: 5px;
 			border-top-left-radius: 5px;
 		
 			font-size: 12px;
+		}
+
+		.navTracks {
+			border: 1px solid lime;
+			border-top: 5px solid lime; 
+		}
+		.navArtists {
+			border: 1px solid lime;
+			border-top: 1px solid lime; 
+		}
+		.navLinks {
+			border: 1px solid lime;
+			border-top: 1px solid lime; 
 		}
 		
 		.nav th:hover{
