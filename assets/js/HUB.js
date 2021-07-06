@@ -52,6 +52,11 @@ collectives[5] = { id : "WQ7ao" , members: [ "Dy8GP", "nlNjO" , "DrQbO" , "L5Yz1
 ///// LEGION OF trap /////
 collectives[6] = { id : "MVKWZ" , members: [ "VKxWy" , "n1E5X" , "D93xM"]};
 
+
+//// BrickWood //// 
+collectives[1] = { id : "XBzdR" , members: []};
+
+
 var members = [];
 var usertracks = [];
 
