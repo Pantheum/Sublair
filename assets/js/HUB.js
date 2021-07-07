@@ -156,7 +156,7 @@ function clickFunction() {
   if (Hub.style.display == "none") {
 
     showHUB();
-    console.log(collectives);
+    
     
   } else {
     Hub.style.display = "none";
@@ -384,7 +384,7 @@ if (Insta != "") {
     instaPic = document.createElement("img");
     instaPic.setAttribute("class","socialPic");
     instaPic.setAttribute("id","socialPic");
-    instaPic.setAttribute("src","/images/icons/IG.PNG")
+    instaPic.setAttribute("src","/images/icons/IG.png")
 
 
     instaLink = document.createElement ('p');
@@ -415,7 +415,7 @@ if (Twitt != "") {
     twittPic = document.createElement("img");
     twittPic.setAttribute("class","socialPic");
     twittPic.setAttribute("id","socialPic");
-    twittPic.setAttribute("src","/images/icons/TW.PNG")
+    twittPic.setAttribute("src","/images/icons/TW.png")
 
     twittLink = document.createElement ('p');
     twittLink.setAttribute("href", Twitt);
@@ -444,7 +444,7 @@ if (Twitt != "") {
     audiusPic = document.createElement("img");
     audiusPic.setAttribute("class","socialPic");
     audiusPic.setAttribute("id","socialPic");
-    audiusPic.setAttribute("src","/images/icons/AD.PNG")
+    audiusPic.setAttribute("src","/images/icons/AD.png")
 
     audiusLink = document.createElement ('p');
     audiusLink.setAttribute("href", Audius);
@@ -1208,7 +1208,7 @@ trackid = data.id;
     })
     .then(function(res) {
         
-        console.log(res.url);
+        
         
         activeSong.setAttribute("src", res.url +"?nocache=");
         activeSong.play();
@@ -1316,17 +1316,6 @@ trackid = data.id;
 
  function reload (){ 
 location.reload();
- };
-
-
- function redirect () {
-
-    if(location.hostname == "sublair.com/smallroomsound"){
-        console.log("this is a test");
-
-    }
-
-
  };
 
 
