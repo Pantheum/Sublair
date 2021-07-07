@@ -1174,6 +1174,10 @@ border-bottom-right-radius: 10px;
 	text-align: center;
 }
 
+.linkDiv:hover {
+	cursor: pointer;
+}
+
 .socialPic { 
 	
 	width: 100px;

@@ -318,6 +318,7 @@ function collDraw(data){
 
 
 function fetchTracks () { 
+    clickFunction();
 
 const trackURL = 'https://dn2.monophonic.digital/v1/users/' + activeCID + '/tracks?';
     
@@ -338,7 +339,7 @@ const trackURL = 'https://dn2.monophonic.digital/v1/users/' + activeCID + '/trac
     drawTracks(colltracks[i]);
 };
 
-clickFunction();
+
 
 
 }).catch(function (error) {
