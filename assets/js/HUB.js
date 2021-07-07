@@ -1089,6 +1089,17 @@ location.reload();
  };
 
 
+ function redirect () {
+
+    if(location.hostname == "sublair.com/smallroomsound"){
+        console.log("this is a test");
+
+    }
+
+
+ };
+
+
 
 
 
