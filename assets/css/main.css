@@ -233,24 +233,7 @@ a:hover{
 
 /* Icon */
 
-	.icon {
-		text-decoration: none;
-		position: relative;
-		border-bottom: none;
-	}
-
-		.icon:before {
-			
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-		}
-
-		.icon > .label {
-			display: none;
-		}
-
+	
 /* List */
 
 ul.artists{
@@ -1172,6 +1155,37 @@ border-bottom-right-radius: 10px;
 	border: 1px solid lime;
 	border-radius: 10px;
 	border-bottom: 10px solid lime;
+}
+
+
+/* social links for collective */
+
+.linkDiv { 
+
+	
+	border-radius: 10px;
+	padding: 10px;
+
+	margin: 0 auto;
+	margin-bottom: 10px;
+	width:  75%;
+	height: auto;
+
+	text-align: center;
+}
+
+.socialPic { 
+	
+	width: 100px;
+	height: 100px;
+
+}
+
+.linkDiv p{ 
+	
+	margin-bottom: 10px;
+	
+	
 }
 
 

@@ -32,48 +32,116 @@ var activeCID = "";
 var collectives = {};
 
 //// phuture ///// 
-collectives[0] = { id : "Wem1e" , members: [ "DBxA9" , "epyGn" , "nogRn" , "n08jM", "no6ve", "LxJqY", "D7Mgn", "no2B5", "nZa4e", "epzvz", "n1OXD", "L5z7D" ]};
+collectives[0] = { 
+    id : "Wem1e" , 
+    members: [ "DBxA9" , "epyGn" , "nogRn" , "n08jM", "no6ve", "LxJqY", "D7Mgn", "no2B5", "nZa4e", "epzvz", "n1OXD", "L5z7D" ], 
+
+    links: { 
+        Instagram : "https://www.instagram.com/phuturecollective/" , 
+        Twitter : "https://twitter.com/phuturecull" , 
+        Audius : "https://audius.co/phuture" , 
+        Website: "",
+    }
+
+};
 
 ///// SRS /////
-collectives[1] = { id : "aARVA" , members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k", "pZEkX", ]};
+collectives[1] = { 
+    id : "aARVA" , 
+    members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k", "pZEkX", ],
+
+    links: { 
+        Instagram : "https://www.instagram.com/_smallroomsound/" , 
+        Twitter : "https://twitter.com/_smallroomsound" , 
+        Audius : "https://audius.co/smallroomsound" , 
+        Website: "" 
+    }
+};
 
 ///// [sus]Collective /////// 
-collectives[2] = { id : "n0Mvj" , members: [ "Dyxzr", "DrP38" , "emWwL" , "nZqpa", "n3AbE", "n6p8M", "n66bn", "Dy8GP", "DNYV0", "eJrke" , "LM40V" , "ebOzP", "DNzpY"]};
+collectives[2] = { 
+    id : "n0Mvj" , 
+    members: [ "Dyxzr", "DrP38" , "emWwL" , "nZqpa", "n3AbE", "n6p8M", "n66bn", "Dy8GP", "DNYV0", "eJrke" , "LM40V" , "ebOzP", "DNzpY"],
+
+    links: { 
+        Instagram : "https://www.instagram.com/innersuscollective/" , 
+        Twitter : "https://twitter.com/InnerSus" , 
+        Audius : "https://audius.co/suscollective" , 
+        Website: "",
+    }
+};
 
 ////// BONSAI /////// 
-collectives[3] = { id : "eJ7zn" , members: [ "n1ER5", "eJ58d", "LKEMw" , "DvYRV", "DOWa4", "nd3me", "eJbde", "ezkz7", "ePWYm", "nogRn", "nVPPD", "LK7oL"]};
+collectives[3] = { 
+    id : "eJ7zn" , 
+    members: [ "n1ER5", "eJ58d", "LKEMw" , "DvYRV", "DOWa4", "nd3me", "eJbde", "ezkz7", "ePWYm", "nogRn", "nVPPD", "LK7oL"],
+
+    links: { 
+        Instagram : "https://www.instagram.com/bonsaicollctive/" , 
+        Twitter : "" , 
+        Audius : "https://audius.co/bonsaicollct" , 
+        Website: "",
+    }
+};
 
 ////// PUSH ////// 
-collectives[4] = { id : "D2oRp" , members: [ "nlNjO" , "nqOPD" , "n3ARJ" , "LjNBB", "LR5MZ", "ez1xD", "D2gpe" , "eJ5p6" , "eJj2e" , "z8rjx" ]};
+collectives[4] = { id : "D2oRp" , 
+members: [ "nlNjO" , "nqOPD" , "n3ARJ" , "LjNBB", "LR5MZ", "ez1xD", "D2gpe" , "eJ5p6" , "eJj2e" , "z8rjx" ],
+
+links: { 
+    Instagram : "https://www.instagram.com/push.collective/" , 
+    Twitter : "" , 
+    Audius : "https://audius.co/pushcollective" , 
+    Website: "",
+}
+
+};
 
 /////// NYT /////// 
-collectives[5] = { id : "WQ7ao" , members: [ "Dy8GP", "nlNjO" , "DrQbO" , "L5Yz1" , "n18pd" , "eYvjv" , "WQzGK" , "DrP38" , "nQ5q4" , "eA3qL" , "LwrPb" , "LWdlj" , "lzamZ" , "em75j" , "ndm0J" , "emWwL" , "LW0vk", "LKE3y" ]};
+collectives[5] = { id : "WQ7ao" ,
+members: [ "Dy8GP", "nlNjO" , "DrQbO" , "L5Yz1" , "n18pd" , "eYvjv" , "WQzGK" , "DrP38" , "nQ5q4" , "eA3qL" , "LwrPb" , "LWdlj" , "lzamZ" , "em75j" , "ndm0J" , "emWwL" , "LW0vk", "LKE3y" ],
+links: { 
+    Instagram : "https://www.instagram.com/thenytclub/" , 
+    Twitter : "" , 
+    Audius : "https://audius.co/thenytclub" , 
+    Website: "",
+}
+};
 
 ///// LEGION OF trap /////
-collectives[6] = { id : "MVKWZ" , members: [ "VKxWy" , "n1E5X" , "D93xM"]};
+collectives[6] = { 
+    id : "MVKWZ" ,
+     members: [ "VKxWy" , "n1E5X" , "D93xM"], 
+     links: { 
+         Instagram : "https://www.instagram.com/legionoftrap/" , 
+         Twitter : "" , 
+         Audius : "https://audius.co/legionoftrap" ,
+         Website: "",
+        }
+
+    };
 
 
 //// BrickWood //// 
-collectives[1] = { id : "XBzdR" , members: []};
+collectives[7] = { 
+    id : "XBzdR" , 
+    members: [], 
+    links: { 
+        Instagram : "" , 
+        Twitter : "https://twitter.com/BRKWDRCRD" , 
+        Audius : "https://audius.co/brkwdrcrd" , 
+        Website: "",
+    }
+};
 
 
 var members = [];
 var usertracks = [];
-
-
-
 var colltracks = [];
+var collLinks = [];
 
 
 initLoad();
-
-
-
-
-
-
-
-
 
 
 
@@ -88,6 +156,7 @@ function clickFunction() {
   if (Hub.style.display == "none") {
 
     showHUB();
+    console.log(collectives);
     
   } else {
     Hub.style.display = "none";
@@ -131,6 +200,8 @@ function initLoad(){
 }); 
 
 members[collectives[i].id] = collectives[i].members;
+collLinks[collectives[i].id] = collectives[i].links;
+
 
 
 
@@ -175,6 +246,7 @@ function initanalysis(data){
     const trackinfo = data[1].data ;
     const userid = userinfo.id
     colltracks[userid] = trackinfo;
+    
     
 
 };
@@ -275,6 +347,132 @@ clickFunction();
     
 }); 
     
+
+};
+
+function drawLinks () { 
+
+var Insta = collLinks[activeCID].Instagram;
+var Twitt = collLinks[activeCID].Twitter
+var Audius = collLinks[activeCID].Audius;
+var Website = collLinks[activeCID].Website;
+
+var instaexists = 0;
+var twittexists = 0;
+
+linkContainer  = document.getElementById("containerLinks");
+
+if (linkContainer.innerHTML == "") {
+
+
+if (Insta != "") { 
+
+    instaexists = 1;    
+
+    instadiv = document.createElement ("div");
+    instadiv.setAttribute("class", "linkDiv");
+    instadiv.setAttribute("id", "linkDiv");
+    instadiv.addEventListener ('click', function(){
+        
+        window.open(Insta);
+
+        
+
+
+    });
+
+    instaPic = document.createElement("img");
+    instaPic.setAttribute("class","socialPic");
+    instaPic.setAttribute("id","socialPic");
+    instaPic.setAttribute("src","/images/icons/IG.PNG")
+
+
+    instaLink = document.createElement ('p');
+    instaLink.setAttribute("href", Insta);
+    instaLink.innerHTML = "INSTAGRAM"
+
+    instadiv.appendChild(instaPic);
+    instadiv.appendChild(instaLink);
+
+}
+
+if (Twitt != "") { 
+
+    twittexists = 1;
+
+    twittdiv = document.createElement ("div");
+    twittdiv.setAttribute("class", "linkDiv");
+    twittdiv.setAttribute("id", "linkDiv");
+    twittdiv.addEventListener ('click', function(){
+        
+        window.open(Twitt);
+
+        
+
+
+    });
+
+    twittPic = document.createElement("img");
+    twittPic.setAttribute("class","socialPic");
+    twittPic.setAttribute("id","socialPic");
+    twittPic.setAttribute("src","/images/icons/TW.PNG")
+
+    twittLink = document.createElement ('p');
+    twittLink.setAttribute("href", Twitt);
+    twittLink.innerHTML = "Twitter";
+
+    twittdiv.appendChild(twittPic);
+    twittdiv.appendChild(twittLink);
+
+
+}
+
+
+
+    audiusdiv = document.createElement ("div");
+    audiusdiv.setAttribute("class", "linkDiv");
+    audiusdiv.setAttribute("id", "linkDiv");
+    audiusdiv.addEventListener ('click', function(){
+        
+        window.open(Audius);
+
+        
+
+
+    });
+
+    audiusPic = document.createElement("img");
+    audiusPic.setAttribute("class","socialPic");
+    audiusPic.setAttribute("id","socialPic");
+    audiusPic.setAttribute("src","/images/icons/AD.PNG")
+
+    audiusLink = document.createElement ('p');
+    audiusLink.setAttribute("href", Audius);
+    audiusLink.innerHTML = "Audius";
+
+    audiusdiv.appendChild(audiusPic);
+    audiusdiv.appendChild(audiusLink);
+
+
+
+if (instaexists == 1){ 
+    linkContainer.appendChild(instadiv);
+}
+
+if (twittexists == 1){ 
+    linkContainer.appendChild(twittdiv);
+}
+    
+
+    
+    linkContainer.appendChild(audiusdiv);
+   
+
+
+    
+} else { 
+
+};
 
 };
 
@@ -490,6 +688,7 @@ function drawCollective (data) {
 
     navrow.appendChild(navTracks);
     navrow.appendChild(navArtists);
+    navrow.appendChild(navLinks);
     nav.appendChild(navrow);
 
 var headerImg = document.createElement('img'); 
@@ -550,6 +749,7 @@ function containerClick (container) {
 
     var nav_Tracks = document.getElementById('navTracks');
     var nav_Artists = document.getElementById('navArtists');
+    var nav_Links = document.getElementById('navLinks');
    
 
 
@@ -562,10 +762,15 @@ function containerClick (container) {
 
         Artists.style.display = "block";
         Releases.style.display = "none";
+        Links.style.display = "none";
        
 
         nav_Artists.style.borderTop = "5px solid lime";
         nav_Tracks.style.borderTop = "1px solid lime";
+        nav_Links.style.borderTop = "1px solid lime";
+
+       
+        
        
 
 
@@ -574,14 +779,39 @@ function containerClick (container) {
     if (container == 'releases'){
        
         Releases.style.display = "block";
-        
         Artists.style.display = "none";
+        Links.style.display = "none";
 
         nav_Artists.style.borderTop = "1px solid lime";
         nav_Tracks.style.borderTop = "5px solid lime";
+        nav_Links.style.borderTop = "1px solid lime";
+
         
 
         datasummary.innerHTML = colltracks.length + " Releases";
+
+
+    };
+
+    if (container == 'links'){
+       
+        Releases.style.display = "none";
+        Artists.style.display = "none";
+        Links.style.display = "block";
+
+
+
+        nav_Artists.style.borderTop = "1px solid lime";
+        nav_Tracks.style.borderTop = "1px solid lime";
+        nav_Links.style.borderTop = "5px solid lime";
+
+        if (Links.innerHTML == ""){ 
+                drawLinks();
+
+        } else { 
+
+        };
+ 
 
 
     };
