@@ -1,18 +1,3 @@
-PHUTURE COLLECTIVE: Wem1e
-
-khanda: DBxA9
-BDos: epyGn
-capshun: nogRn
-summet: n08jM
-floret: no6ve
-Fidus aka rvkit: LxJqY
-Mr. L (Carmack): D7Mgn
-rohaan: no2B5
-Diversa: nZa4e
-himmel: epzvz
-chromonicci: n1OXD
-ZenAware: L5z7D
-
 
 PHUTURE COLLECTIVE
 var collective = "Wem1e";
@@ -44,11 +29,13 @@ Legion of trap
 collectives[1] = { id : "MVKWZ" , members: [ "VKxWy" , "n1E5X" , "D93xM" ]};
 
 
-
-
 Brickwood
 collectives[1] = { id : "XBzdR" , members: []};
 
+
+brain kat
+collectives[1] = { id : "ygbJP" , members: [ "" , "" , "" , "" , "" , "" , "" , "" , "" ,]};
+ 
 
 
 
