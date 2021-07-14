@@ -136,7 +136,7 @@ collectives[7] = {
 
 ////// uncomfy beats //////
 
-collectives[1] = { 
+collectives[8] = { 
     id : "L5KpX" , 
     members: [ "g6zbl", "9RXNk", "oEMJv" , "3mx40" , "g4NOp" ],
 
@@ -150,7 +150,7 @@ collectives[1] = {
 
 ///// ground fault ///// 
 
-collectives[1] = { 
+collectives[9] = { 
     id : "E2vAQ" , 
     members: [ ],
 
