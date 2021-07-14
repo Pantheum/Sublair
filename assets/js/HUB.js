@@ -148,6 +148,20 @@ collectives[1] = {
     }
 };
 
+///// ground fault ///// 
+
+collectives[1] = { 
+    id : "E2vAQ" , 
+    members: [ ],
+
+    links: { 
+        Instagram : "https://www.instagram.com/groundfaultinterrupt/", 
+        Twitter : "https://twitter.com/groundfaultint", 
+        Audius : "https://audius.co/groundfaultint" , 
+        Website: "" 
+    }
+};
+
 
 
 
