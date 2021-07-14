@@ -113,7 +113,7 @@ collectives[8] = {
         Instagram : "https://www.instagram.com/uncomfortablebeats/" , 
         Twitter : "https://twitter.com/Uncomfybeats" , 
         Audius : "https://audius.co/uncomfybeats" , 
-        Website: "" 
+        Website: "https://uncomfortablebeats.com/" 
     }
 };
 

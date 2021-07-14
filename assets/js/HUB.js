@@ -1,5 +1,4 @@
 
-
 var didSearch = 0;
 
 var UI = document.getElementById("UI");
@@ -557,7 +556,7 @@ function drawCollective (data) {
     navHome.innerHTML = " < sublair";
     navHome.setAttribute('id','navHome');
     navHome.setAttribute('class','navHome');
-    navHome.setAttribute("onclick","reload()");
+    navHome.setAttribute("onclick","showLair()");
 
 
     var headerDiv = document.createElement('div');
@@ -867,6 +866,14 @@ function showHUB() {
     Main.style.display = "none";
     UI.style.display = "block";
     Hub.style.display = "block";
+    
+};
+
+function showLair() { 
+    
+    Main.style.display = "block";
+    UI.style.display = "block";
+    Hub.style.display = "none";
     
 };
 
@@ -1218,9 +1225,7 @@ trackid = data.id;
  
 
 
- function reload (){ 
-location.reload();
- };
+ 
 
 
 
