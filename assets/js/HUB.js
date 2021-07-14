@@ -134,6 +134,22 @@ collectives[7] = {
     }
 };
 
+////// uncomfy beats //////
+
+collectives[1] = { 
+    id : "L5KpX" , 
+    members: [ "g6zbl", "9RXNk", "oEMJv" , "3mx40" , "g4NOp" ],
+
+    links: { 
+        Instagram : "https://www.instagram.com/uncomfortablebeats/" , 
+        Twitter : "https://twitter.com/Uncomfybeats" , 
+        Audius : "https://audius.co/uncomfybeats" , 
+        Website: "" 
+    }
+};
+
+
+
 
 var members = [];
 var usertracks = [];
