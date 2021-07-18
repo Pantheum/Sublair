@@ -565,7 +565,10 @@ h2, h1{
 			
 		}
 
-		
+		.collName{ 
+			
+			
+		}
 
 		.collArtists {
 			color:lime;
@@ -981,7 +984,7 @@ div.scanlines{
 	width:100%;
 	height:100vh;
 	position: fixed;
-	background-image: url("/images/textures/txt11.png");
+	background-image: url("./images/textures/txt11.png");
 	opacity: .3;
 
 	box-shadow: inset 0px 0px 500px rgba(0,255,0,.5);
@@ -1018,7 +1021,7 @@ div.uiTop{
     height: 2em;
     border-bottom: 1px black solid;
     background-color: black;
-    background-image: url("/images/textures/txt3.png");
+    background-image: url("./images/textures/txt3.png");
     
     
     
@@ -1206,7 +1209,7 @@ border-bottom-right-radius: 10px;
 
 	width: 75%;
 	height: 100%;
-	background-color: rgba(26, 35, 30, 1);
+	background-color: #1a231e;
 
 
 }
