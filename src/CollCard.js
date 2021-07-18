@@ -4,17 +4,19 @@ import { Link } from 'react-router-dom';
 
 function CollCard(props) {
   return (
-   <div class="collCard" id="collCard">
-       <img class="collImg" id="collImg" src={props.image}></img>
-        <div class="collInfo" id="collInfo">
-            <p class="collName">{props.name}</p>
-            <p class="collFollow">{props.followers}</p>
-            <p class="collTracks">{props.tracks}</p>
-            <p class="collArtists">
-                <Link to={props.link}>BROWSE</Link>
-            </p>
+    <Link to={props.link}>
+        <div class="collCard" id="collCard">
+            <img class="collImg" id="collImg" src={props.image}></img>
+                <div class="collInfo" id="collInfo">
+                    <p class="collName">{props.name}</p>
+                    <p class="collFollow">{props.followers}</p>
+                    <p class="collTracks">{props.tracks}</p>
+                    <p class="collArtists">
+                        BROWSE
+                    </p>
+                </div>
         </div>
-   </div>
+    </Link>
 
   );
 }
