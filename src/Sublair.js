@@ -3,7 +3,9 @@ import './Sublair.css';
 import CollCard from './CollCard.js';
 
 import subLair from "./images/SubLair.png"
+
 function Sublair() {
+    
   return (
       <body>
         <div>
@@ -17,12 +19,11 @@ function Sublair() {
                         <p class="browse" id="browse"> ▼ Browse Collectives ▼ </p>
                     </div>
                     <div class="collHub" id="collHub">
-                        <CollCard name="test" followers="4" tracks="5" image="https://creatornode.audius.co/ipfs/QmZi6JZQzPAA871y2TuKdZfjVSgrSmYProYxGc4Qhf2gMk/150x150.jpg"></CollCard>
-                        <CollCard></CollCard>
-                        <CollCard></CollCard>
-                        <CollCard></CollCard>
-                        <CollCard></CollCard>
-                        <CollCard></CollCard>
+                        <CollCard name="test" followers="4" tracks="5" image="https://creatornode.audius.co/ipfs/QmZi6JZQzPAA871y2TuKdZfjVSgrSmYProYxGc4Qhf2gMk/150x150.jpg" link="./PUSH"></CollCard>
+                        
+
+                        
+
                     </div>
                 </section>
                 <div class="Hub"></div>
