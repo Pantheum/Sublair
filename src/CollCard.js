@@ -11,7 +11,7 @@ function CollCard(props) {
             <p class="collFollow">{props.followers}</p>
             <p class="collTracks">{props.tracks}</p>
             <p class="collArtists">
-                BROWSE
+                Browse
             </p>
         </div>
    </div>

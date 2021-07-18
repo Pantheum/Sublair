@@ -9,7 +9,7 @@ function Collective() {
             <div id="wrapper">
                 <section id="main" Style="display: block;">
                     <div class="SubLair">
-                        
+                       
                     </div>
                 </section>
                 <div class="Hub"></div>
