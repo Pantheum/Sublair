@@ -145,3 +145,17 @@ collectives[10] = {
     }
 };
 
+////// TREE COLLECTIVE //////
+
+collectives[11] = { 
+    id : "RY0oj" , 
+    members: [ "D8P0J" , "D7mgP" , "5QQ17"],
+
+    links: { 
+        Instagram : "https://www.instagram.com/treecollectivepdx/" , 
+        Twitter : "" , 
+        Audius : "https://audius.co/tcpdx" , 
+        Website: "" 
+    }
+};
+
