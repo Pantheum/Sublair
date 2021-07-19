@@ -131,3 +131,17 @@ collectives[9] = {
     }
 };
 
+////// swampstep //////
+
+collectives[10] = { 
+    id : "LRbZG" , 
+    members: [ "LKJ7z","nQoW9", "8zRx9", "RKb31" , "D8vBl" , "LwPlk" , "DXY3b" , "ePNVX" , "ebQOK" , "eYxNm" , "n1E3E" ],
+
+    links: { 
+        Instagram : "https://www.instagram.com/swampstep/" , 
+        Twitter : "https://twitter.com/Swamp_step" , 
+        Audius : "https://audius.co/swampstep" , 
+        Website: "" 
+    }
+};
+
