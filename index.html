@@ -1,13 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
         
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-        
         <link rel="icon" href="images/icon.png" type="image/x-icon"/>
 		<link rel="shortcut icon" href="images/icon.png" type="image/x-icon"/>
 
@@ -30,7 +32,8 @@
 
 
 	</head>
-	<body class="is-loading">
+	<body class="is-loading" ng-app = "mainApp">
+		<div>
 
 		<div class="scanlines" id="scanlines">
 
@@ -111,13 +114,6 @@
 							<p class="browse" id="browse"> &#9660; Browse Collectives &#9660; </p>
 						</div>
 						
-						
-                    
-							
-						
-						
-
-
 						<div class="collHub" id="collHub">
 
 
@@ -156,6 +152,9 @@
 
 			</div>
 
+
+		</div>
+
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 			<script>
@@ -169,6 +168,8 @@
         
 		<script src="assets/js/collectives.js"></script>
         <script src="assets/js/HUB.js"></script>
+		<script src="assets/js/routing.js"></script>
+		
 		
 
 	</body>
