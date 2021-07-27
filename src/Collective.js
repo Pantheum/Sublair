@@ -2,7 +2,28 @@ import './Sublair.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Sublair from './Sublair.js'
+import {useParams} from "react-router-dom";
 
+const CollectiveDetails = () => {
+  const { collectiveName } = useParams();
+  /* search JSOn file for that name and then fetch the corresponding data
+  to populate the collective object*/
+
+  /*
+  otherwise return a 404 page
+  */
+  return (
+    
+    <div>{collectiveName}
+    <Collective> </Collective>
+    </div>
+    
+);
+}
+
+ 
+
+export default CollectiveDetails;
 
 
 function Collective(props) {
@@ -40,4 +61,4 @@ function Collective(props) {
   );
 }
 
-export default Collective;
+

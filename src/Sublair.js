@@ -3,30 +3,37 @@ import './Sublair.css';
 import CollCard from './CollCard.js';
 
 import subLair from "./images/SubLair.png"
-
+import FetchCollective from './FetchCollective';
+import collectiveMetaData from './collectiveMetaData.json';
 function Sublair() {
-    
+    const idList = ["D2oRp", "aARVA", "nogRn"];
+ 
   return (
       <body>
         <div>
-            <div class="scanlines" id="scanlines"></div> 
-            <div class="UI" id="UI"></div>
+            <div className="scanlines" id="scanlines"></div> 
+            <div className="UI" id="UI"></div>
             <div id="wrapper">
                 <section id="main" Style="display: block;">
-                    <div class="SubLair">
+                    <div className="SubLair">
                         <img src={subLair}></img>
                         <p>the global underground music scene</p>
-                        <p class="browse" id="browse"> ▼ Browse Collectives ▼ </p>
+                        <p className="browse" id="browse"> ▼ Browse Collectives ▼ </p>
                     </div>
-                    <div class="collHub" id="collHub">
-                        <CollCard name="test" followers="4" tracks="5" image="https://creatornode.audius.co/ipfs/QmZi6JZQzPAA871y2TuKdZfjVSgrSmYProYxGc4Qhf2gMk/150x150.jpg" link="./PUSH"></CollCard>
-                        
+                    <div className="collHub" id="collHub">
 
-                        
+                        {
+                            /*
+                            map the collectives to the id's listed above
+                            */ 
+                            idList.map((curId) =>
+                        <FetchCollective id={curId} key={curId}></FetchCollective>)
+                        }
+                    
 
                     </div>
                 </section>
-                <div class="Hub"></div>
+                <div className="Hub"></div>
                 <footer id="footer"></footer>    
             </div> 
             
