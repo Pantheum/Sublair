@@ -17,7 +17,7 @@ collectives[0] = {
 ///// SRS /////
 collectives[1] = { 
     id : "aARVA" , 
-    members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k", "pZEkX", "NYaq4" , "OPx74" ],
+    members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "yg5WE", "eJj3k", "pZEkX", "NYaq4" , "OPx74" ],
 
     links: { 
         Instagram : "https://www.instagram.com/_smallroomsound/" , 
