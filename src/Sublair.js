@@ -4,10 +4,14 @@ import CollCard from './CollCard.js';
 
 import subLair from "./images/SubLair.png"
 import FetchCollective from './FetchCollective';
-import collectiveMetaData from './collectiveMetaData.json';
+
+import {collectives} from './collectivesMetaData.js';
 function Sublair() {
     const idList = ["D2oRp", "aARVA", "nogRn"];
- 
+    const collectiveMetaData = collectives
+    
+    
+    
   return (
       <body>
         <div>
@@ -26,8 +30,9 @@ function Sublair() {
                             /*
                             map the collectives to the id's listed above
                             */ 
-                            idList.map((curId) =>
-                        <FetchCollective id={curId} key={curId}></FetchCollective>)
+                            collectiveMetaData.map((curCollective) =>
+                        <FetchCollective id={curCollective.id} key={curCollective.id}></FetchCollective>)
+                        
                         }
                     
 

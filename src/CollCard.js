@@ -6,6 +6,17 @@ function CollCard(props) {
   
   
   return (
+    /*
+    <Link
+        to={{
+          pathname: `/${props.link}`,
+          state: {
+            id: props.id,
+          },
+        }}
+      >
+        
+</Link>*/
     
     <Link to={`/${props.link}`}>
         <div className="collCard" id="collCard">

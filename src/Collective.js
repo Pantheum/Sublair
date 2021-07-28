@@ -50,8 +50,12 @@ function Collective(props) {
                       <th id="navLinks" class="navLinks">Links </th>
                     </tr>
                   </table>
-
+                  <div class="containerReleases" Style="display: block;">
+                    <TrackCard></TrackCard>
+                  </div>
+                    
                 </div>
+                
                 <footer id="footer"></footer>
                  
             </div> 
@@ -61,4 +65,31 @@ function Collective(props) {
   );
 }
 
+
+function TrackCard(){
+  return(<div className="trackCard">
+    <img className="trArt"></img>
+    <div className="trContainer">
+      <p>
+
+      </p>
+      <table className="trackinfotable"></table>
+    </div>
+  </div>);
+}
+
+function HubCard(props){
+  return(
+    <div className="hubCard">
+      <img className="cardPic"></img>
+      <p className="cardName"></p>
+      <p className="cardFollowers">
+        <i className="fas fa-user"></i>
+      </p>
+      <p className="trackCount"></p>
+      <div className="cardTracks"></div>
+      <a href=""></a>
+    </div>
+  );
+}
 
