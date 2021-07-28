@@ -5,19 +5,7 @@ import { Link } from 'react-router-dom';
 function CollCard(props) {
   
   
-  return (
-    /*
-    <Link
-        to={{
-          pathname: `/${props.link}`,
-          state: {
-            id: props.id,
-          },
-        }}
-      >
-        
-</Link>*/
-    
+  return (    
     <Link to={`/${props.link}`}>
         <div className="collCard" id="collCard">
             <img className="collImg" id="collImg" src={props.image}></img>

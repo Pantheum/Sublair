@@ -32,19 +32,19 @@ function Collective(props) {
       <body>
         
         <div>
-            <div class="scanlines" id="scanlines"></div> 
-            <div class="UI" id="UI"></div>
+            <div className="scanlines" id="scanlines"></div> 
+            <div className="UI" id="UI"></div>
             <div id="wrapper">
                 
-                <div class="Hub">
+                <div className="Hub">
                 
-                  <p id="navHome" class="navHome"><Link to='/'> &lt; sublair</Link></p>
-                  <div class="headerDiv">
-                    <img class="headerImg" src={props.image}></img>
-                    <p class="headerName">{props.name}</p>
-                    <p class="headerArtists">{props.releases}</p>
+                  <p id="navHome" className="navHome"><Link to='/'> &lt; sublair</Link></p>
+                  <div className="headerDiv">
+                    <img className="headerImg" src={props.image}></img>
+                    <p className="headerName">{props.name}</p>
+                    <p className="headerArtists">{props.releases}</p>
                   </div>
-                  <table class="nav">
+                  <table className="nav">
                     <tr>
                       <SelectionContainer></SelectionContainer>
                     </tr>
@@ -98,9 +98,9 @@ class SelectionContainer extends React.Component {
 
     return (
       <div>
-      <th id="navTracks" class="navTracks" onClick={this.handleReleasesClick}>Releases</th>
-      <th id="navArtists" class="navArtists" onClick={this.handleArtistClick}>Artists</th>
-      <th id="navLinks" class="navLinks" onClick={this.handleLinksClick}>Links </th>
+      <th id="navTracks" className="navTracks" onClick={this.handleReleasesClick}>Releases</th>
+      <th id="navArtists" className="navArtists" onClick={this.handleArtistClick}>Artists</th>
+      <th id="navLinks" className="navLinks" onClick={this.handleLinksClick}>Links </th>
       
       <div id="" className="containerReleases" Style="display: block;">
          {button}
@@ -134,7 +134,9 @@ function HubCard(props){
         <i className="fas fa-user"></i>
       </p>
       <p className="trackCount"></p>
-      <div className="cardTracks"></div>
+      <div className="cardTracks">
+        
+      </div>
       <a href=""></a>
     </div>
   );

@@ -11,7 +11,6 @@ export default class FetchCollective extends React.Component {
     collective: null
   };
 
-
   async componentDidMount() {
     /*D2oRp */
     
