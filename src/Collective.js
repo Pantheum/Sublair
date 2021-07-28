@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Sublair from './Sublair.js'
 import {useParams} from "react-router-dom";
+import React from 'react';
 
 const CollectiveDetails = () => {
   const { collectiveName } = useParams();
@@ -45,14 +46,12 @@ function Collective(props) {
                   </div>
                   <table class="nav">
                     <tr>
-                      <th id="navTracks" class="navTracks">Releases</th>
-                      <th id="navArtists" class="navArtists">Artists</th>
-                      <th id="navLinks" class="navLinks">Links </th>
+                      <SelectionContainer></SelectionContainer>
                     </tr>
                   </table>
-                  <div class="containerReleases" Style="display: block;">
-                    <TrackCard></TrackCard>
-                  </div>
+
+                  
+                 
                     
                 </div>
                 
@@ -65,6 +64,54 @@ function Collective(props) {
   );
 }
 
+class SelectionContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleReleasesClick = this.handleReleasesClick.bind(this);
+    this.handleArtistClick = this.handleArtistClick.bind(this);
+    this.handleLinksClick = this.handleLinksClick.bind(this);
+    this.state = {tab: 'releases'}
+  }
+  handleReleasesClick() {
+    this.setState({tab: 'releases'});
+  }
+  handleArtistClick(){
+    this.setState({tab: 'artists'});
+  }
+  handleLinksClick(){
+    this.setState({tab: 'links'});
+  }
+
+  render() {
+    const tab = this.state.tab;
+    let button;
+
+    if(tab === 'releases'){
+      button = <TrackCard></TrackCard>
+    }
+    else if(tab === 'artists'){
+      button = <HubCard></HubCard>
+    }
+    else if(tab === 'links'){
+      button = <div>LINKS</div>
+    }
+
+    return (
+      <div>
+      <th id="navTracks" class="navTracks" onClick={this.handleReleasesClick}>Releases</th>
+      <th id="navArtists" class="navArtists" onClick={this.handleArtistClick}>Artists</th>
+      <th id="navLinks" class="navLinks" onClick={this.handleLinksClick}>Links </th>
+      
+      <div id="" className="containerReleases" Style="display: block;">
+         {button}
+      </div>
+   
+      </div>
+    );
+  }
+  
+  
+}
 
 function TrackCard(){
   return(<div className="trackCard">
@@ -92,4 +139,5 @@ function HubCard(props){
     </div>
   );
 }
+
 

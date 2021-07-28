@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 import Sublair from './Sublair.js'
 import Collective from './Collective.js'
 import FetchCollective from './FetchCollective'
+
 function App() {
   return (
-   
+  
 /*<Collective></Collective>*/
     
     <Router>
