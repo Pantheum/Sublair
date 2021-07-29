@@ -8,6 +8,9 @@ import React from 'react';
 import {collectives} from './collectivesMetaData.js';
 import { createPortal } from 'react-dom';
 
+
+
+
 const CollectiveDetails = () => {
   const { collectiveName } = useParams();
   /* search JSOn file for that name and then fetch the corresponding data
@@ -28,6 +31,8 @@ const CollectiveDetails = () => {
                           
                           console.log("this collective matchs the url " + curCollective.name)
                           
+
+
                           return(<Collective> </Collective>
 
                           );
@@ -39,7 +44,7 @@ const CollectiveDetails = () => {
                         )
                         
                         }
-                        404
+                        404 {collectiveName}
                         
                         
    
@@ -72,7 +77,7 @@ function Collective(props) {
                   </div>
                   <table className="nav">
                     <tr>
-                      <SelectionContainer></SelectionContainer>
+                      <SelectionContainer ></SelectionContainer>
                     </tr>
                   </table>
 
@@ -116,6 +121,8 @@ class SelectionContainer extends React.Component {
       button = <TrackCard></TrackCard>
     }
     else if(tab === 'artists'){
+      /*const url = "https://dn2.monophonic.digital/v1/users/"+ props.collective.id;*/
+      
       button = <HubCard></HubCard>
     }
     else if(tab === 'links'){
@@ -139,14 +146,17 @@ class SelectionContainer extends React.Component {
   
 }
 
-function TrackCard(){
+function TrackCard(props){
   return(<div className="trackCard">
-    <img className="trArt"></img>
+    <img className="trArt">{props.image}</img>
     <div className="trContainer">
       <p>
-
+        {props.trackName}
       </p>
-      <table className="trackinfotable"></table>
+      <table className="trackinfotable">
+        
+      </table>
+
     </div>
   </div>);
 }
@@ -154,12 +164,19 @@ function TrackCard(){
 function HubCard(props){
   return(
     <div className="hubCard">
-      <img className="cardPic"></img>
-      <p className="cardName"></p>
-      <p className="cardFollowers">
-        <i className="fas fa-user"></i>
+      <img className="cardPic" src={props.image}>
+
+      </img>
+      <p className="cardName">
+        {props.cardName}
       </p>
-      <p className="trackCount"></p>
+      <p className="cardFollowers">
+          <i className="fas fa-user">
+          {props.cardFollowers}</i>
+      </p>
+      <p className="trackCount">
+        {props.trackCount}
+      </p>
       <div className="cardTracks">
         
       </div>

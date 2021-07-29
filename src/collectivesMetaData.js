@@ -3,7 +3,7 @@
 //// phuture ///// 
 export const collectives = [{ 
     id : "Wem1e" ,
-    name : "PHUTURECOLLECTIVE" , 
+    name : "PhutureCollective" , 
     members: [ "DBxA9" , "epyGn" , "nogRn" , "n08jM", "no6ve", "LxJqY", "D7Mgn", "no2B5", "nZa4e", "epzvz", "n1OXD", "L5z7D" ], 
 
     links: { 
@@ -18,7 +18,7 @@ export const collectives = [{
 ///// SRS /////
  { 
     id : "aARVA" , 
-    name : "" ,
+    name : "SmallRoomSound" ,
     members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k", "pZEkX", "NYaq4" , "OPx74" ],
 
     links: { 
@@ -56,7 +56,8 @@ export const collectives = [{
     }
 },
 ////// PUSH ////// 
-{ id : "D2oRp" , 
+{ id : "D2oRp" ,
+name: "PUSHCollective", 
 members: [ "nlNjO" , "nqOPD" , "n3ARJ" , "LjNBB", "LR5MZ", "ez1xD", "D2gpe" , "eJ5p6" , "eJj2e" , "z8rjx" ],
 
 links: { 
@@ -70,6 +71,7 @@ links: {
 
 /////// NYT /////// 
  { id : "WQ7ao" ,
+ name: "nytclub",
 members: [ "Dy8GP", "nlNjO" , "DrQbO" , "L5Yz1" , "n18pd" , "eYvjv" , "WQzGK" , "DrP38" , "nQ5q4" , "eA3qL" , "LwrPb" , "LWdlj" , "lzamZ" , "em75j" , "ndm0J" , "emWwL" , "LW0vk", "LKE3y" ],
 links: { 
     Instagram : "https://www.instagram.com/thenytclub/" , 
@@ -82,6 +84,7 @@ links: {
 ///// LEGION OF trap /////
  { 
     id : "MVKWZ" ,
+    name : "LegionOfTrap",
      members: [ "VKxWy" , "n1E5X" , "D93xM"], 
      links: { 
          Instagram : "https://www.instagram.com/legionoftrap/" , 
