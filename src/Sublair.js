@@ -7,7 +7,6 @@ import FetchCollective from './FetchCollective';
 
 import {collectives} from './collectivesMetaData.js';
 function Sublair() {
-    const idList = ["D2oRp", "aARVA", "nogRn"];
     const collectiveMetaData = collectives
     
     

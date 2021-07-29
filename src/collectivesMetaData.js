@@ -2,7 +2,8 @@
 
 //// phuture ///// 
 export const collectives = [{ 
-    id : "Wem1e" , 
+    id : "Wem1e" ,
+    name : "PHUTURECOLLECTIVE" , 
     members: [ "DBxA9" , "epyGn" , "nogRn" , "n08jM", "no6ve", "LxJqY", "D7Mgn", "no2B5", "nZa4e", "epzvz", "n1OXD", "L5z7D" ], 
 
     links: { 
@@ -17,6 +18,7 @@ export const collectives = [{
 ///// SRS /////
  { 
     id : "aARVA" , 
+    name : "" ,
     members: [ "9Rdy2", "wP7Vj" , "z8pkZ" , "v7QwK" , "Axdjv", "yg5WE", "eJj3k", "pZEkX", "NYaq4" , "OPx74" ],
 
     links: { 
@@ -29,7 +31,8 @@ export const collectives = [{
 
 ///// [sus]Collective /////// 
 { 
-    id : "n0Mvj" , 
+    id : "n0Mvj" ,
+    name : "[SUS]COLLECTIVE" , 
     members: [ "Dyxzr", "DrP38" , "emWwL" , "nZqpa", "n3AbE", "n6p8M", "n66bn", "Dy8GP", "DNYV0", "eJrke" , "LM40V" , "ebOzP", "DNzpY"],
 
     links: { 
@@ -42,6 +45,7 @@ export const collectives = [{
 ////// BONSAI /////// 
 { 
     id : "eJ7zn" , 
+    name : "BONSAI🗻",
     members: [ "n1ER5", "eJ58d", "LKEMw" , "DvYRV", "DOWa4", "nd3me", "eJbde", "ezkz7", "ePWYm", "nogRn", "nVPPD", "LK7oL"],
 
     links: { 

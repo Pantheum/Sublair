@@ -5,6 +5,9 @@ import Sublair from './Sublair.js'
 import {useParams} from "react-router-dom";
 import React from 'react';
 
+import {collectives} from './collectivesMetaData.js';
+import { createPortal } from 'react-dom';
+
 const CollectiveDetails = () => {
   const { collectiveName } = useParams();
   /* search JSOn file for that name and then fetch the corresponding data
@@ -15,8 +18,31 @@ const CollectiveDetails = () => {
   */
   return (
     
-    <div>{collectiveName}
-    <Collective> </Collective>
+    <div>
+    {/* match the collective name to the pairing in the file
+          then fetch the data
+          then assign data to the collective object*/}
+  {
+          collectives.map((curCollective) =>
+                        {if(curCollective.name === collectiveName){
+                          
+                          console.log("this collective matchs the url " + curCollective.name)
+                          
+                          return(<Collective> </Collective>
+
+                          );
+                        }
+                        
+                        }
+                        
+                          
+                        )
+                        
+                        }
+                        404
+                        
+                        
+   
     </div>
     
 );
