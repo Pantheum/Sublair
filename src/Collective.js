@@ -9,7 +9,7 @@ import {collectives} from './collectivesMetaData.js';
 import { createPortal } from 'react-dom';
 
 
-
+const MyContext = React.createContext();
 
 const CollectiveDetails = () => {
   const { collectiveName } = useParams();
@@ -22,6 +22,7 @@ const CollectiveDetails = () => {
   return (
     
     <div>
+    
     {/* match the collective name to the pairing in the file
           then fetch the data
           then assign data to the collective object*/}
@@ -29,9 +30,9 @@ const CollectiveDetails = () => {
           collectives.map((curCollective) =>
                         {if(curCollective.name === collectiveName){
                           
-                          console.log("this collective matchs the url " + curCollective.name)
                           
-
+                          
+                          {MyContext.SelectedCollective = curCollective};
 
                           return(<Collective> </Collective>
 
@@ -94,6 +95,17 @@ function Collective(props) {
     </body>
   );
 }
+function RenderCollectiveList(props){
+  
+  return(<div>
+    {props.Collective.members.map((curArtist) =>
+      
+      <FetchArtist id={curArtist}></FetchArtist>
+      
+      )}
+  </div>);
+
+}
 
 class SelectionContainer extends React.Component {
   constructor(props) {
@@ -116,14 +128,24 @@ class SelectionContainer extends React.Component {
   render() {
     const tab = this.state.tab;
     let button;
-
     if(tab === 'releases'){
       button = <TrackCard></TrackCard>
+      /*console.log(MyContext.SelectedCollective.name);*/
     }
     else if(tab === 'artists'){
-      /*const url = "https://dn2.monophonic.digital/v1/users/"+ props.collective.id;*/
+      /*console.log("THe collective artists are: " + MyContext.SelectedCollective.members);*/
       
-      button = <HubCard></HubCard>
+      
+      button = <RenderCollectiveList Collective={MyContext.SelectedCollective}></RenderCollectiveList>
+     
+
+        
+        
+      
+      
+        /*const url = "https://dn2.monophonic.digital/v1/users/"+ MyContext.SelectedCollective.id;*/
+      
+      /*button = <HubCard ></HubCard>*/
     }
     else if(tab === 'links'){
       button = <div>LINKS</div>
@@ -135,8 +157,9 @@ class SelectionContainer extends React.Component {
       <th id="navArtists" className="navArtists" onClick={this.handleArtistClick}>Artists</th>
       <th id="navLinks" className="navLinks" onClick={this.handleLinksClick}>Links </th>
       
-      <div id="" className="containerReleases" Style="display: block;">
+      <div id="" className="containerReleases" >
          {button}
+       
       </div>
    
       </div>
@@ -161,11 +184,12 @@ function TrackCard(props){
   </div>);
 }
 
+
 function HubCard(props){
   return(
     <div className="hubCard">
       <img className="cardPic" src={props.image}>
-
+        {console.log("THe image is "+ props.image)}
       </img>
       <p className="cardName">
         {props.cardName}
@@ -185,4 +209,44 @@ function HubCard(props){
   );
 }
 
+class FetchArtist extends React.Component {
+  constructor(props){
+    super(props);
+  }
+  state = {
+    loading: true,
+    collective: null
+  };
+
+  async componentDidMount() {
+    
+    
+    const url = "https://dn2.monophonic.digital/v1/users/" + this.props.id;
+    console.log(url);
+  
+    const response = await fetch(url);
+    const data = await response.json();
+
+    this.setState({ artistData: data.data, loading: false });
+    
+  }
+  render() {
+    if (this.state.loading) {
+      return <div></div>;
+    }
+    else{
+    console.log(this.state.artistData)
+    return (
+      
+      <HubCard image={this.state.artistData.profile_picture['150x150']}
+        cardName={this.state.artistData.name}
+        cardFollowers={this.state.artistData.follower_count}
+        trackCount={this.state.artistData.track_count}
+      ></HubCard>
+     
+    );
+    }
+  }
+
+}
 
