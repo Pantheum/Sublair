@@ -1,17 +1,12 @@
 import './Sublair.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Sublair from './Sublair.js'
 import {useParams} from "react-router-dom";
 import React from 'react';
 
 
 import {collectives} from './collectivesMetaData.js';
-import { createPortal } from 'react-dom';
 import IG from "./images/icons/IG.png";
 import AD from "./images/icons/AD.png";
-import { data } from 'jquery';
-import { Item } from 'semantic-ui-react';
 
 const MyContext = React.createContext();
 
@@ -36,9 +31,8 @@ const CollectiveDetails = () => {
                           
                           
                           {MyContext.SelectedCollective = curCollective};
-                          console.log("THe current collective is " + curCollective.name);
-                          console.log("the id is"+curCollective.id)
-                          return(<div><FetchCollective id={curCollective.id}></FetchCollective>
+                         
+                          return(<div key={curCollective}><FetchCollective id={curCollective.id} ></FetchCollective>
                           </div>
 
                           );
@@ -78,7 +72,7 @@ function Collective(props) {
                 
                   <p id="navHome" className="navHome"><Link to='/'> &lt; sublair</Link></p>
                   <div className="headerDiv">
-                    <img className="headerImg" src={props.image}></img>
+                    <img className="headerImg" src={props.image} alt=""></img>
                     <p className="headerName">{props.name}</p>
                     <p className="headerArtists">{props.releases} RELEASES</p>
                   </div>
@@ -106,7 +100,7 @@ function RenderCollectiveList(props){
   return(<div>
     {props.Collective.members.map((curArtist) =>
       
-      <FetchArtist id={curArtist}></FetchArtist>
+      <FetchArtist id={curArtist} key={curArtist}></FetchArtist>
       
       )}
   </div>);
@@ -161,10 +155,10 @@ class SelectionContainer extends React.Component {
       button =
       <div>
         <div className="linkDiv">
-          <img className="socialPic" src={IG}></img>
+          <img className="socialPic" src={IG} alt=""></img>
         </div>
         <div className="linkDiv">
-          <img className="socialPic" src={AD}></img>
+          <img className="socialPic" src={AD} alt=""></img>
         </div>
       </div>
 
@@ -192,7 +186,7 @@ class SelectionContainer extends React.Component {
 function TrackCard(props){
   
   return(<div className="trackCard">
-    <img className="trArt" src={props.image}></img>
+    <img className="trArt" src={props.image} alt=""></img>
     <div className="trContainer">
       <p>
         {props.trackName}
@@ -209,7 +203,7 @@ function TrackCard(props){
 function HubCard(props){
   return(
     <div className="hubCard">
-      <img className="cardPic" src={props.image}>
+      <img className="cardPic" src={props.image} alt="">
         
       </img>
       <p className="cardName">
@@ -291,7 +285,7 @@ class FetchTrackList extends React.Component {
     {
       
     
-    data.data.map((item)=>/*console.log(item.title)*/<div>{item}</div>)
+    /*data.data.map((item)=>console.log(item.title)<div>{item}</div>) */
 
     
   }
@@ -307,7 +301,7 @@ class FetchTrackList extends React.Component {
     
     return (<div>
       {this.state.artistData.map((item) =>/*console.log(item.title + item.artwork['150x150'])*/
-        <TrackCard trackName={item.title} image={item.artwork['150x150']} >
+        <TrackCard trackName={item.title} image={item.artwork['150x150']} key={item.title} >
         
         </TrackCard>
         

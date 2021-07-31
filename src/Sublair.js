@@ -1,7 +1,4 @@
 import './Sublair.css';
-
-import CollCard from './CollCard.js';
-
 import subLair from "./images/SubLair.png"
 import FetchCollCard from './FetchCollCard';
 
@@ -12,12 +9,12 @@ function Sublair() {
     
     
   return (
-      <body>
+      
         <div>
             <div className="scanlines" id="scanlines"></div> 
             <div className="UI" id="UI"></div>
             <div id="wrapper">
-                <section id="main" Style="display: block;">
+                <section id="main">
                     <div className="SubLair">
                         <img src={subLair}></img>
                         <p>the global underground music scene</p>
@@ -42,7 +39,7 @@ function Sublair() {
             </div> 
             
         </div>
-    </body>
+    
   );
 }
 

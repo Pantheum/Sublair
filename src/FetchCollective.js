@@ -14,7 +14,7 @@ export default class FetchCollective extends React.Component {
       /*D2oRp */
       
       const url = "https://dn2.monophonic.digital/v1/users/" + this.props.id;
-      console.log(url);
+    
       /*const url = "https://api.randomuser.me/";*/
       const response = await fetch(url);
       const data = await response.json();
@@ -37,7 +37,7 @@ export default class FetchCollective extends React.Component {
       if (!this.state.collective) {
         return <div>Collective unReachable</div>;
       }
-      console.log(this.state.collective.name)
+      
       return (
 
         <collective 
