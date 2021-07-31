@@ -5,6 +5,7 @@ import Sublair from './Sublair.js'
 import {useParams} from "react-router-dom";
 import React from 'react';
 
+
 import {collectives} from './collectivesMetaData.js';
 import { createPortal } from 'react-dom';
 
@@ -20,7 +21,6 @@ const CollectiveDetails = () => {
   otherwise return a 404 page
   */
   return (
-    
     <div>
     
     {/* match the collective name to the pairing in the file
@@ -33,8 +33,10 @@ const CollectiveDetails = () => {
                           
                           
                           {MyContext.SelectedCollective = curCollective};
-
-                          return(<Collective> </Collective>
+                          console.log("THe current collective is " + curCollective.name);
+                          console.log("the id is"+curCollective.id)
+                          return(<div><FetchCollective id={curCollective.id}></FetchCollective>
+                          </div>
 
                           );
                         }
@@ -45,10 +47,10 @@ const CollectiveDetails = () => {
                         )
                         
                         }
-                        404 {collectiveName}
                         
                         
-   
+                        
+  
     </div>
     
 );
@@ -60,6 +62,7 @@ export default CollectiveDetails;
 
 
 function Collective(props) {
+
   return (
       <body>
         
@@ -74,7 +77,7 @@ function Collective(props) {
                   <div className="headerDiv">
                     <img className="headerImg" src={props.image}></img>
                     <p className="headerName">{props.name}</p>
-                    <p className="headerArtists">{props.releases}</p>
+                    <p className="headerArtists">{props.releases} RELEASES</p>
                   </div>
                   <table className="nav">
                     <tr>
@@ -128,13 +131,16 @@ class SelectionContainer extends React.Component {
   render() {
     const tab = this.state.tab;
     let button;
+    let className;
     if(tab === 'releases'){
+      
       button = <TrackCard></TrackCard>
       /*console.log(MyContext.SelectedCollective.name);*/
+      className = "containerReleases"
     }
     else if(tab === 'artists'){
       /*console.log("THe collective artists are: " + MyContext.SelectedCollective.members);*/
-      
+      className = "containerArtists"
       
       button = <RenderCollectiveList Collective={MyContext.SelectedCollective}></RenderCollectiveList>
      
@@ -149,6 +155,7 @@ class SelectionContainer extends React.Component {
     }
     else if(tab === 'links'){
       button = <div>LINKS</div>
+      className="containerReleases"
     }
 
     return (
@@ -157,7 +164,7 @@ class SelectionContainer extends React.Component {
       <th id="navArtists" className="navArtists" onClick={this.handleArtistClick}>Artists</th>
       <th id="navLinks" className="navLinks" onClick={this.handleLinksClick}>Links </th>
       
-      <div id="" className="containerReleases" >
+      <div id="" className={className} >
          {button}
        
       </div>
@@ -235,7 +242,7 @@ class FetchArtist extends React.Component {
       return <div></div>;
     }
     else{
-    console.log(this.state.artistData)
+    console.log(this.state.id)
     return (
       
       <HubCard image={this.state.artistData.profile_picture['150x150']}
@@ -248,5 +255,58 @@ class FetchArtist extends React.Component {
     }
   }
 
+}
+
+
+class FetchCollective extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+  state = {
+    loading: true,
+    collective: null
+  };
+
+  async componentDidMount() {
+    /*D2oRp */
+    
+    const url = "https://dn2.monophonic.digital/v1/users/" + this.props.id;
+    console.log(url);
+    /*const url = "https://api.randomuser.me/";*/
+    const response = await fetch(url);
+    const data = await response.json();
+    /*console.log(data.data.id);*/
+    /*this.setState({ person: data.results[0], loading: false });*/
+    this.setState({ collective: data.data, loading: false });
+
+    /*
+    console.log(data.data.handle);
+    <div>{data.data.handle}</div>*/
+    
+  }
+  
+
+  render() {
+    if (this.state.loading) {
+      return <div>LOADING PLACEHOLDER REPLACE WITH BACKGROUND or animation</div>;
+    }
+
+    if (!this.state.collective) {
+      return <div>Collective unReachable</div>;
+    }
+    console.log(this.state.collective.name)
+    return (
+    
+
+      <Collective 
+      image={this.state.collective.profile_picture['150x150']}
+      name={this.state.collective.name} 
+      releases={this.state.collective.track_count}
+
+      >
+      </Collective>
+    );
+  }
 }
 

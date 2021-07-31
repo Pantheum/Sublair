@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function CollCard(props) {
   
-  
+    
   return (    
     <Link to={`/${props.link}`}>
         <div className="collCard" id="collCard">

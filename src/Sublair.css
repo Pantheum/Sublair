@@ -1112,15 +1112,17 @@ border-bottom-right-radius: 10px;
 
 /*  Containers */ 
 .containerArtists{ 
-
-	display: none;
+	display: block;
 	margin: 0 auto;
-	margin-top: 10px;
+	margin-top:  10px;
+	padding: 10px;
 	border: 1px solid lime;
 	border-radius: 10px;
-	border-bottom: 10px solid lime;
-	border-top: 10px solid lime;
+	border-top: 10px solid lime; 
+	border-bottom: 10px solid lime; 
+	
 
+	
 }
 
 .containerReleases{ 

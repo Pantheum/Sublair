@@ -3,7 +3,7 @@ import './Sublair.css';
 import CollCard from './CollCard.js';
 
 import subLair from "./images/SubLair.png"
-import FetchCollective from './FetchCollective';
+import FetchCollCard from './FetchCollCard';
 
 import {collectives} from './collectivesMetaData.js';
 function Sublair() {
@@ -30,7 +30,7 @@ function Sublair() {
                             map the collectives to the id's listed above
                             */ 
                             collectiveMetaData.map((curCollective) =>
-                        <FetchCollective id={curCollective.id} key={curCollective.id}></FetchCollective>)
+                        <FetchCollCard id={curCollective.id} key={curCollective.id}></FetchCollCard>)
                         
                         }
                     
