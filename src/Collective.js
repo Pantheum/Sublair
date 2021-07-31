@@ -8,7 +8,10 @@ import React from 'react';
 
 import {collectives} from './collectivesMetaData.js';
 import { createPortal } from 'react-dom';
-
+import IG from "./images/icons/IG.png";
+import AD from "./images/icons/AD.png";
+import { data } from 'jquery';
+import { Item } from 'semantic-ui-react';
 
 const MyContext = React.createContext();
 
@@ -110,6 +113,7 @@ function RenderCollectiveList(props){
 
 }
 
+
 class SelectionContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -133,9 +137,9 @@ class SelectionContainer extends React.Component {
     let button;
     let className;
     if(tab === 'releases'){
-      
-      button = <TrackCard></TrackCard>
-      /*console.log(MyContext.SelectedCollective.name);*/
+     
+      button = <FetchTrackList id={MyContext.SelectedCollective.id}></FetchTrackList>
+      /*button = <TrackCard image="" trackName="Test123"></TrackCard>*/
       className = "containerReleases"
     }
     else if(tab === 'artists'){
@@ -154,7 +158,16 @@ class SelectionContainer extends React.Component {
       /*button = <HubCard ></HubCard>*/
     }
     else if(tab === 'links'){
-      button = <div>LINKS</div>
+      button =
+      <div>
+        <div className="linkDiv">
+          <img className="socialPic" src={IG}></img>
+        </div>
+        <div className="linkDiv">
+          <img className="socialPic" src={AD}></img>
+        </div>
+      </div>
+
       className="containerReleases"
     }
 
@@ -177,8 +190,9 @@ class SelectionContainer extends React.Component {
 }
 
 function TrackCard(props){
+  
   return(<div className="trackCard">
-    <img className="trArt">{props.image}</img>
+    <img className="trArt" src={props.image}></img>
     <div className="trContainer">
       <p>
         {props.trackName}
@@ -196,7 +210,7 @@ function HubCard(props){
   return(
     <div className="hubCard">
       <img className="cardPic" src={props.image}>
-        {console.log("THe image is "+ props.image)}
+        
       </img>
       <p className="cardName">
         {props.cardName}
@@ -229,7 +243,7 @@ class FetchArtist extends React.Component {
     
     
     const url = "https://dn2.monophonic.digital/v1/users/" + this.props.id;
-    console.log(url);
+    /*console.log(url);*/
   
     const response = await fetch(url);
     const data = await response.json();
@@ -242,7 +256,7 @@ class FetchArtist extends React.Component {
       return <div></div>;
     }
     else{
-    console.log(this.state.id)
+    /*console.log(this.state.id)*/
     return (
       
       <HubCard image={this.state.artistData.profile_picture['150x150']}
@@ -256,6 +270,59 @@ class FetchArtist extends React.Component {
   }
 
 }
+
+class FetchTrackList extends React.Component {
+  constructor(props){
+    super(props);
+  }
+  state = {
+    loading: true,
+    collective: null
+  };
+
+  async componentDidMount() {
+    
+    
+    const url = 'https://dn2.monophonic.digital/v1/users/' +this.props.id +'/tracks?'
+    
+  
+    const response = await fetch(url);
+    const data = await response.json();
+    {
+      
+    
+    data.data.map((item)=>/*console.log(item.title)*/<div>{item}</div>)
+
+    
+  }
+    
+    this.setState({ artistData: data.data, loading: false });
+    
+  }
+  render() {
+    if (this.state.loading) {
+      return <div></div>;
+    }
+    else{
+    
+    return (<div>
+      {this.state.artistData.map((item) =>/*console.log(item.title + item.artwork['150x150'])*/
+        <TrackCard trackName={item.title} image={item.artwork['150x150']} >
+        
+        </TrackCard>
+        
+      /*console.log(item.artwork['150x150'])*/
+      
+      )}
+      
+        </div>
+     
+    );
+    }
+  }
+
+}
+
 
 
 class FetchCollective extends React.Component {
@@ -272,7 +339,7 @@ class FetchCollective extends React.Component {
     /*D2oRp */
     
     const url = "https://dn2.monophonic.digital/v1/users/" + this.props.id;
-    console.log(url);
+    /*console.log(url);*/
     /*const url = "https://api.randomuser.me/";*/
     const response = await fetch(url);
     const data = await response.json();
@@ -295,7 +362,7 @@ class FetchCollective extends React.Component {
     if (!this.state.collective) {
       return <div>Collective unReachable</div>;
     }
-    console.log(this.state.collective.name)
+    /*console.log(this.state.collective.name)*/
     return (
     
 
