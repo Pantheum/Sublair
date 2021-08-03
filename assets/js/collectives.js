@@ -159,3 +159,16 @@ collectives[11] = {
     }
 };
 
+////// SUB SCIETY //////
+
+collectives[11] = { 
+    id : "DNKAQ" , 
+    members: [ "LxN87", "ebr7Q" , "Drr8z" , "eGqY7" , "n3roB" , "nZ5Gv" , "eJpoL" , "DvKaK" , "eG2Nb" , "DXY3b",     ],
+
+    links: { 
+        Instagram : "https://www.instagram.com/subcietypresents", 
+        Twitter : "https://twitter.com/thesubciety" , 
+        Audius : "https://audius.co/subciety" , 
+        Website: "" 
+    }
+};
