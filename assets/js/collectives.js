@@ -172,3 +172,18 @@ collectives[11] = {
         Website: "" 
     }
 };
+
+
+//// MASSIVE MUSIC ///// 
+
+collectives[12] = { 
+    id : "eANgK" , 
+    members: [],
+
+    links: { 
+        Instagram : "https://www.instagram.com/massivemusicstyle/", 
+        Twitter : "https://twitter.com/921massive" , 
+        Audius : "https://audius.co/MassiveMusic" , 
+        Website: "" 
+    }
+};
