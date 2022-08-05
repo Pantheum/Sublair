@@ -68,7 +68,7 @@ img {
 		-webkit-text-size-adjust: none;
         background-color: #1a231e;
         
-        color: lime;
+        color: white;
 	}
 
 a {
@@ -225,7 +225,7 @@ a:hover{
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px lime;
+		border-bottom: solid 1px white;
 		margin: 3em 0em;
 	}
 
@@ -275,7 +275,7 @@ ul.artists{
 				}
 
 		ul.icons {
-			cursor: lime;
+			cursor: white;
 			list-style: none;
 			padding-left: 0;
 			margin-top: -0.675em;
@@ -287,7 +287,7 @@ ul.artists{
 			}
 
 				ul.icons li a {
-                    color: lime;
+                    color: white;
 					text-decoration: none;
 				    position: relative;
 					display: block;
@@ -306,7 +306,7 @@ ul.artists{
 					}
 
 					ul.icons li a:before {
-						color: lime;
+						color: white;
 						
 					}
 
@@ -366,7 +366,7 @@ ul.artists{
 /* Button */
 
 h2, h1{
-	color: lime;
+	color: white;
 }
 
 .art-header:hover{
@@ -391,9 +391,9 @@ h2, h1{
 		text-align: center;
         
         
-        border: 1px solid lime;
-		border-top: 10px solid lime;
-		border-bottom: 10px solid lime;
+        border: 1px solid white;
+		border-top: 10px solid white;
+		border-bottom: 10px solid white;
         
         
 		-moz-transform-origin: 50% 50%;
@@ -465,15 +465,15 @@ h2, h1{
 
 			font-size: 12px;
 
-			text-shadow: 0px 0px 10px lime,
-			0px 0px 20px lime,
-			0px 0px 30px lime;
+			text-shadow: 0px 0px 10px white,
+			0px 0px 20px white,
+			0px 0px 30px white;
 		}
 
 		.browse {
-			text-shadow: 0px 0px 0px lime,
-			0px 0px 0px lime,
-			0px 0px 0px lime;
+			text-shadow: 0px 0px 0px white,
+			0px 0px 0px white,
+			0px 0px 0px white;
 			
 			margin-top: 2em;
 		}
@@ -486,9 +486,9 @@ h2, h1{
 		.collHub{
 			width:  100%;
 			height: 500px;
-			border: 1px solid lime;
-			border-top: 10px solid lime;
-			border-bottom: 10px solid lime;
+			border: 1px solid white;
+			border-top: 10px solid white;
+			border-bottom: 10px solid white;
 			border-radius: 10px;
 			padding:10px;
 
@@ -516,9 +516,9 @@ h2, h1{
 
 			display: flex;
 
-			border: 1px solid lime;
-			border-top:10px solid lime;
-			border-bottom:10px solid lime;
+			border: 1px solid white;
+			border-top:10px solid white;
+			border-bottom:10px solid white;
 			border-radius: 10px;
 		}
 
@@ -527,7 +527,7 @@ h2, h1{
 		}
 
 		.collImg { 
-			border: 3px solid lime;
+			border: 3px solid white;
 			margin: 10px 0px 10px 10px;
 
 			border-radius: 50%;
@@ -546,11 +546,11 @@ h2, h1{
 		
 
 		.collArtists {
-			color:lime;
+			color:white;
 
-			text-shadow:  0px 0px 3px lime,
-			0px 0px 5px lime,
-			0px 0px 10px lime;
+			text-shadow:  0px 0px 3px white,
+			0px 0px 5px white,
+			0px 0px 10px white;
 
 			;
 		}
@@ -568,8 +568,8 @@ h2, h1{
 				display: flex;
 				height: 100px;
 				width: 100%;
-				border-top:5px solid lime ;
-				border-bottom:5px solid lime;
+				border-top:5px solid white ;
+				border-bottom:5px solid white;
 			}
 
 			.collImg{ 
@@ -683,21 +683,21 @@ h2, h1{
 /* FX */
 
 .mainBio { 
-color: lime ;
-text-shadow: 0px 0px 5px lime, 
-			0px 0px 10px lime, 
-			0px 0px 20px lime;
+color: white ;
+text-shadow: 0px 0px 5px white, 
+			0px 0px 10px white, 
+			0px 0px 20px white;
     
 }
 
 .art-header {
     
-    color:lime;
-text-shadow: 0px 0px 10px lime,
-            0px 0px 20px lime,
-            0px 0px 300px lime,
-            0px 0px 40px lime,
-            0px 0px 50px lime;
+    color:white;
+text-shadow: 0px 0px 10px white,
+            0px 0px 20px white,
+            0px 0px 300px white,
+            0px 0px 40px white,
+            0px 0px 50px white;
 }
 
 
@@ -708,9 +708,9 @@ text-shadow: 0px 0px 10px lime,
 .headerDiv{ 
 	margin: 0 auto;
 	text-align: center;
-	border-top: 10px solid lime;
-	border-left: 1px solid lime;
-	border-right: 1px solid lime;
+	border-top: 10px solid white;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	padding: 1em;
@@ -718,15 +718,15 @@ text-shadow: 0px 0px 10px lime,
 
 .headerImg{
 	border-radius: 50%;
-	border: 5px solid lime;
+	border: 5px solid white;
 	
 }
 
 .headerName { 
 	padding: 10px;
-	text-shadow: 0px 0px 3px lime,
-	0px 0px 5px lime,
-	0px 0px 7px lime;
+	text-shadow: 0px 0px 3px white,
+	0px 0px 5px white,
+	0px 0px 7px white;
 }
 
 
@@ -760,10 +760,10 @@ div.hubCard{
     border-radius: 20px;
     height:auto; 
     
-	color: lime;
-    border: 1px lime solid;
-	border-top: 10px lime solid;
-	border-bottom: 10px lime solid;
+	color: white;
+    border: 1px white solid;
+	border-top: 10px white solid;
+	border-bottom: 10px white solid;
 
     transition: .5s;
     
@@ -785,25 +785,25 @@ div.hubCard:hover, div.hubCard:active{
     width:96px;
     border-radius: 48px;
     margin: 1em;
-	border: 5px solid lime;
+	border: 5px solid white;
 }
 
 
 div.hubCard  p.trackCount {
     display: inline;
     font-size: 10px;
-    color: lime;
+    color: white;
     margin-right: 10px;
     
-    text-shadow: 0px 0px 1px lime ,
-            0px 0px 5px lime,
-            0px 0px 10px lime;
+    text-shadow: 0px 0px 1px white ,
+            0px 0px 5px white,
+            0px 0px 10px white;
 }
 
 div.hubCard a.cardHandle{ 
 	font-size:  10px;
     display: block;
-    color:lime;
+    color:white;
 	width: 100%;
 	padding: 10px;
 bottom: 0;
@@ -823,7 +823,7 @@ div.hubCard a.cardHandle:hover{
 }
 
 div.hubCard  p.cardName {
-    color: lime;
+    color: white;
     font-weight: bold;
     
 }
@@ -831,7 +831,7 @@ div.hubCard  p.cardName {
 div.hubCard  p.cardBio {
 	
 	
-    color: lime;
+    color: white;
     font-size: 10px;
     
     
@@ -845,9 +845,9 @@ div.cardTracks{
     height: 500px;
     width: 100%;
 
-	border: 1px lime solid;
-	border-bottom: 20px lime solid;
-	border-top:20px lime solid;
+	border: 1px white solid;
+	border-bottom: 20px white solid;
+	border-top:20px white solid;
     border-radius: 10px;
 
     
@@ -871,12 +871,12 @@ div.cardTracks{
 }
 
 div.cardTracks  h1{
-    color:lime;
-    text-shadow: 0px 0px 10px lime,
-            0px 0px 20px lime,
-            0px 0px 300px lime,
-            0px 0px 40px lime,
-            0px 0px 50px lime;
+    color:white;
+    text-shadow: 0px 0px 10px white,
+            0px 0px 20px white,
+            0px 0px 300px white,
+            0px 0px 40px white,
+            0px 0px 50px white;
 }
 
 
@@ -896,7 +896,7 @@ div.trackCard {
     
     
 	filter:grayscale(1);
-    border: 1px lime solid;
+    border: 1px white solid;
 	border-radius: 10px;
     
      
@@ -912,9 +912,9 @@ div.trackCard:hover {
     
     filter:grayscale(0);
     
-    text-shadow:         0px 0px 1px lime,
-                         0px 0px 3px lime,
-                         0px 0px 5px lime;
+    text-shadow:         0px 0px 1px white,
+                         0px 0px 3px white,
+                         0px 0px 5px white;
     
    
                          
@@ -1049,9 +1049,9 @@ border-collapse:separate;
 
 .nav tr{ 
 width: 100%;
-border-bottom: 1px solid lime;
-border-right: 1px solid lime;
-border-left: 1px solid lime;
+border-bottom: 1px solid white;
+border-right: 1px solid white;
+border-left: 1px solid white;
 border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
 }
@@ -1072,16 +1072,16 @@ border-bottom-right-radius: 10px;
 }
 
 .navTracks {
-	border: 1px solid lime;
-	border-top: 5px solid lime; 
+	border: 1px solid white;
+	border-top: 5px solid white; 
 }
 .navArtists {
-	border: 1px solid lime;
-	border-top: 1px solid lime; 
+	border: 1px solid white;
+	border-top: 1px solid white; 
 }
 .navLinks {
-	border: 1px solid lime;
-	border-top: 1px solid lime; 
+	border: 1px solid white;
+	border-top: 1px solid white; 
 }
 
 
@@ -1091,10 +1091,10 @@ border-bottom-right-radius: 10px;
 	display: none;
 	margin: 0 auto;
 	margin-top: 10px;
-	border: 1px solid lime;
+	border: 1px solid white;
 	border-radius: 10px;
-	border-bottom: 10px solid lime;
-	border-top: 10px solid lime;
+	border-bottom: 10px solid white;
+	border-top: 10px solid white;
 
 }
 
@@ -1103,10 +1103,10 @@ border-bottom-right-radius: 10px;
 	margin: 0 auto;
 	margin-top:  10px;
 	padding: 10px;
-	border: 1px solid lime;
+	border: 1px solid white;
 	border-radius: 10px;
-	border-top: 10px solid lime; 
-	border-bottom: 10px solid lime; 
+	border-top: 10px solid white; 
+	border-bottom: 10px solid white; 
 	
 	max-height: 375px;
 	overflow-y: scroll;
@@ -1126,9 +1126,9 @@ border-bottom-right-radius: 10px;
 	display: none;
 	margin: 0 auto;
 	margin-top: 10px;
-	border: 1px solid lime;
+	border: 1px solid white;
 	border-radius: 10px;
-	border-bottom: 10px solid lime;
+	border-bottom: 10px solid white;
 }
 
 
@@ -1174,9 +1174,9 @@ border-bottom-right-radius: 10px;
 .audioContainer {
 	margin:  0 auto;
 
-	border-top: 10px lime solid;
-	border-left: 1px lime solid;
-	border-right:1px lime solid;
+	border-top: 10px white solid;
+	border-left: 1px white solid;
+	border-right:1px white solid;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 
@@ -1228,14 +1228,14 @@ border-bottom-right-radius: 10px;
 		background-color: rgba(0, 0, 0, 0);
 		width:64px;
 		height: 64px;
-		color: lime;
+		color: white;
 		border: none;
 		
 
 
-		text-shadow:  0px 0px 1px lime,	
-		0px 0px 5px lime,
-		0px 0px 10px lime;
+		text-shadow:  0px 0px 1px white,	
+		0px 0px 5px white,
+		0px 0px 10px white;
 
 		transition: .5s;
 
@@ -1244,9 +1244,9 @@ border-bottom-right-radius: 10px;
 	button:hover {
 		
 		
-		text-shadow:  0px 0px 5px lime,	
-		0px 0px 10px lime,
-		0px 0px 20px lime;
+		text-shadow:  0px 0px 5px white,	
+		0px 0px 10px white,
+		0px 0px 20px white;
 
 		transition: .5s;
 
@@ -1254,9 +1254,9 @@ border-bottom-right-radius: 10px;
 
 	button:focus {
 		outline: none;
-		text-shadow:  0px 0px 5px lime,	
-		0px 0px 10px lime,
-		0px 0px 20px lime;
+		text-shadow:  0px 0px 5px white,	
+		0px 0px 10px white,
+		0px 0px 20px white;
 
 		transition: .5s;
 	}
@@ -1293,9 +1293,9 @@ border-bottom-right-radius: 10px;
 		
 		.nav tr{ 
 		width: 100%;
-		border-bottom: 1px solid lime;
-		border-right: 1px solid lime;
-		border-left: 1px solid lime;
+		border-bottom: 1px solid white;
+		border-right: 1px solid white;
+		border-left: 1px solid white;
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
 		}
@@ -1313,24 +1313,24 @@ border-bottom-right-radius: 10px;
 		}
 
 		.navTracks {
-			border: 1px solid lime;
-			border-top: 5px solid lime; 
+			border: 1px solid white;
+			border-top: 5px solid white; 
 		}
 		.navArtists {
-			border: 1px solid lime;
-			border-top: 1px solid lime; 
+			border: 1px solid white;
+			border-top: 1px solid white; 
 		}
 		.navLinks {
-			border: 1px solid lime;
-			border-top: 1px solid lime; 
+			border: 1px solid white;
+			border-top: 1px solid white; 
 		}
 		
 		.nav th:hover{
 			cursor: pointer;
 			
 
-			border: 1px solid lime;
-			border-top: 5px solid lime;
+			border: 1px solid white;
+			border-top: 5px solid white;
 			
 		}
 
@@ -1371,7 +1371,7 @@ border-bottom-right-radius: 10px;
 		
 		
 		filter:grayscale(1);
-		border: 1px lime solid;
+		border: 1px white solid;
 		border-radius: 10px;
 		
 		 
@@ -1386,9 +1386,9 @@ border-bottom-right-radius: 10px;
 		
 		filter:grayscale(0);
 		
-		text-shadow:         0px 0px 1px lime,
-							 0px 0px 3px lime,
-							 0px 0px 5px lime;
+		text-shadow:         0px 0px 1px white,
+							 0px 0px 3px white,
+							 0px 0px 5px white;
 		
 	   
 							 
@@ -1404,9 +1404,9 @@ border-bottom-right-radius: 10px;
 	margin:  0 auto;
 	padding: 5px;
 
-	border-top: 10px lime solid;
-	border-left: 0px lime solid;
-	border-right:0px lime solid;
+	border-top: 10px white solid;
+	border-left: 0px white solid;
+	border-right:0px white solid;
 
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
@@ -1446,10 +1446,10 @@ border-bottom-right-radius: 10px;
 		margin-right: 10%;
 		height: 2px;
 		width:  0px;
-		background-color: lime;
-		box-shadow:  0px 0px 1px lime,
-					  0px 0px 5px lime,
-					  0px 0px 10px lime;
+		background-color: white;
+		box-shadow:  0px 0px 1px white,
+					  0px 0px 5px white,
+					  0px 0px 10px white;
 	}
 
 	.audioBttns{
@@ -1463,15 +1463,15 @@ border-bottom-right-radius: 10px;
 		background-color: rgba(0, 0, 0, 0);
 		width:32px;
 		height: 32px;
-		color: lime;
+		color: white;
 		border: none;
 		margin-bottom: 10px;
 		
 
 
-		text-shadow:  0px 0px 1px lime,	
-		0px 0px 5px lime,
-		0px 0px 10px lime;
+		text-shadow:  0px 0px 1px white,	
+		0px 0px 5px white,
+		0px 0px 10px white;
 
 	}
 
