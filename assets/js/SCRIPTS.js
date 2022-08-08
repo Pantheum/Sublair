@@ -34,3 +34,8 @@ if  (shape == 'HEX'){
 
 
 };
+
+
+function toggleMobileMenu(menu) { 
+    menu.classList.toggle('open');
+};
