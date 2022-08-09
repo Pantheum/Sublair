@@ -25,7 +25,7 @@ header a:hover {
 
 header {
 	padding: 0 20px 20px 0px;
-	background-color: darkgrereen;
+	background-color: black;
 	width: 100%;
 	height: 50px;
 	display: flex;
@@ -185,6 +185,7 @@ div.scanlines{
 	position: flex;
 	z-index: -1;
 	pointer-events: none;
+	text-align: center;
 	}
 
 #child {
@@ -192,13 +193,29 @@ div.scanlines{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	opacity: 33%;
 	pointer-events: inherit;
 	}
 
 	#child img{
 		width: 150px;
 		height: 150px;
+		opacity: 33%;
+	}
+
+	#child h1, h6{
+		opacity: 33%;
+	}
+
+	#child a{ 
+		opacity: 100%;
+		color: white;
+		font-size: 18px;
+		text-shadow: 0px 0px 8px #FFFFFF;
+		pointer-events: all;
+	}
+
+	#child a:hover {
+		cursor: pointer;
 	}
 
 	.MF { 
