@@ -8,7 +8,8 @@
 }
 
 body{ 
-	background-color: black;
+	background-image: url("/images/textures/txt11.png");
+	background-color: #191919;
 	color: white;
 	font-family: 'Times New Roman', Times, serif;
 }
@@ -25,7 +26,7 @@ header a:hover {
 
 header {
 	padding: 0 20px 20px 0px;
-	background-color: black;
+	background-color: #191919;
 	width: 100%;
 	height: 50px;
 	display: flex;
@@ -155,7 +156,6 @@ ul li:hover {
 		position: fixed;
 		background-image: url("/images/textures/txt11.png");
 		opacity: .1;
-		box-shadow: inset 0px 0px 500px lightgrey;
 	
 	}
 	
@@ -172,9 +172,7 @@ div.scanlines{
 	width:100%;
 	height:100%;
 	position: fixed;
-	background-image: url("/images/textures/txt11.png");
-	opacity: .3;
-	box-shadow: inset 0px 0px 500px lightgrey;
+	opacity: .1;
 
 }
 
