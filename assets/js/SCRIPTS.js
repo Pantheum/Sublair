@@ -1,4 +1,6 @@
 var container = document.getElementById("shapecontainer");
+var screen = document.getElementById("screen");
+var imgpth = "images/assets/crt_";
 
 
 function loadmodel(shape){
@@ -35,4 +37,44 @@ if  (shape == 'HEX'){
 
 function toggleMobileMenu(menu) { 
     menu.classList.toggle('open');
+};
+
+function loadimg(toload) {
+
+    if (toload == 001) {
+        screen.src = "images/assets/crt_001.png";
+    };
+
+    if (toload == 002) {
+        screen.src = "images/assets/crt_002.png";
+    };
+
+    if (toload == 003) {
+        screen.src = "images/assets/crt_003.png";
+    };
+
+    if (toload == 004) {
+        screen.src = "images/assets/crt_004.png";
+    };
+
+    if (toload == 005) {
+        screen.src = "images/assets/crt_005.png";
+    };
+
+    if (toload == 006) {
+        screen.src = "images/assets/crt_006.png";
+    };
+
+    if (toload == 007) {
+        screen.src = "images/assets/crt_007.png";
+    };
+
+    if (toload == 008) {
+        screen.src = "images/assets/crt_008.png";
+    };
+    
+
+    
+
+
 };
