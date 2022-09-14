@@ -166,52 +166,15 @@ ul li:hover {
 #parent {
 	height: 100%;
 	width: 100%;
-	position: flex;
+	position: absolute;
 	z-index: -1;
 	text-align: center;
+	border: 5px solid green;
 	}
-
-#child {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	pointer-events: inherit;
-	}
-
-	#child img{
-		width: 150px;
-		height: 150px;
-	}
-
-	#child h1, h6{
-	}
-
-	#child a{ 
-		color: white;
-		font-size: 18px;
-		text-shadow: 0px 0px 8px #FFFFFF;
-		pointer-events: all;
-	}
-
-	#child a:hover {
-		cursor: pointer;
-	}
-
-	.MF { 
-		text-align: center;
-		background-color: white;
-		padding: none;
-		margin: none;
-		border-radius: 3px;
-		color: black;
-	}
-
-	
 
 	button { 
 		color: white;
 		background: none;
-		margin-top: 15%;
 		padding: 10px;
 		border: white 1px solid;
 		border-radius: 5px;
@@ -229,15 +192,11 @@ box-shadow: 0px 0px 12px -1px #FFFFFF;
 	
 	.gallery{
 		background-image:url("/images/textures/txt12.png") ;
-		position: absolute;
-		top: 90%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 		border: 1px solid white;	
 		border-radius: 10px;
-		height: 75%;
-		width: 80%;
-		overflow-y:scroll;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
 		padding: 10px;
 	}
 
@@ -264,7 +223,6 @@ box-shadow: 0px 0px 12px -1px #FFFFFF;
 	  }
 
 	  .grid div{
-		display: inline-block;
 		width: 100%;
 		height:100%;
 		border:1px solid yellow;
@@ -272,13 +230,19 @@ box-shadow: 0px 0px 12px -1px #FFFFFF;
 
 	  .screen img {
 		margin: 10px;
-		width: 100%;
-		height: 100%;
+		width: 75%;
+		height: 75%;
 	  }
 
 
-	  /* Hide scrollbar for Chrome, Safari and Opera */
-.gallery::-webkit-scrollbar {
+	
+
+}
+
+  
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .gallery::-webkit-scrollbar {
 	display: none;
   }
   
@@ -287,7 +251,3 @@ box-shadow: 0px 0px 12px -1px #FFFFFF;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
   }
-
-}
-
-  
