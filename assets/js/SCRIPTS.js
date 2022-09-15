@@ -12,6 +12,12 @@ function toggleMobileMenu(menu) {
 
 function loadimg(toload) {
 
+    if (toload == 00) {
+        screen.src = "images/assets/crt_intro.png";
+        bttn.src = "images/icons/fab_off.png"
+        bttnstate = 0
+    };
+
     if (toload == 01) {
         screen.src = "images/assets/crt_01.png";
         bttn.src = "images/icons/fab_on.png"
