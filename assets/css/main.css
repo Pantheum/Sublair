@@ -148,8 +148,8 @@ ul li:hover {
 .menu-span {
 	border: 1px solid white;
 	margin-top: 10%;
-	width: auto;
-	height: auto;
+	width: 240px;
+	height: 240px;
 	text-align: center;
 	background-image: url("/images/textures/txt1.png");
 	background-color: #191919;
