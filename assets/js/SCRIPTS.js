@@ -13,7 +13,7 @@ function toggleMobileMenu(menu) {
 function loadimg(toload) {
 
     if (toload == 00) {
-        screen.src = "images/assets/crt_intro.png";
+        screen.src = "images/assets/CRT_intro.png";
         bttn.src = "images/icons/fab_off.png"
         bttnstate = 0
     };
