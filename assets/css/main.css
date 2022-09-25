@@ -5,7 +5,6 @@
 	padding:0;
 	margin: 0;
 	box-sizing: border-box;
-	
 }
 
 body{ 
@@ -15,13 +14,6 @@ body{
 	font-family: 'Times New Roman', Times, serif;
 	overflow-y:hidden;
 }
-
-p {
-	font-size: 12px; 
-
-
-}
-
 
 .li:before {
 	font-family: “Font Awesome 5 Free“; font-weight: 900; }
@@ -199,99 +191,66 @@ box-shadow: -1px 1px 50px 2px rgba(255,255,255,0.45);
 		display: block;
 	}
 
-
-	
-
 #parent {
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	z-index: -1;
 	text-align: center;
-	overflow: hidden;
+	overflow-y: scroll;
 	padding: none;
 	margin: none;
-	}
+	}	
 
-	.right {
-		width: 100%;
-		height:auto;
-		
-	}
-
-	.left {
-		width: 100%;
-		height:100%;
-	}
-	
-	.gallery{
-		background-image:url("/images/textures/txt9.png") ;
-		background-color: black;
-		border: 1px solid white;	
-		border-top: 5px solid white;	
-		border-radius: 10px;
-		width: 100%;
+	#container{ 
 		height: 100%;
+		background-color: black 0;
 		overflow-y: scroll;
-		padding: 10px;
-		box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-	}
-
-	.gallery img{ 
-		width:  100%;
-		height:  100%;
-		border-radius: 20px;
-		transition: 0.5s; 
-	}
-
-	.gallery img:hover{ 
-		cursor: pointer;
-		transform: scale(1.05);
-		transition: 0.5s; 
-	}
-
-	.grid {
 		
-		display: grid;
-		margin-left: 25%;
-		grid-template-columns: repeat(1, 1fr);
-		width:  50%;
-		margin-bottom: 600px;
-		padding: 0;
-	  }
-
-	  .grid div{
-		width: 100%;
-		height:auto;
-	  }
-
-	  .screen img {
-		width: 75%;
-		height: 100%;
-		margin-bottom: none;
-	  }
-
-	  #buttn { 
-		width: 50%;
-		z-index: 10;
-		margin: none;
-		border-radius: 10px;
-		margin-bottom: 20px;
-	  }
-
-	  /* Hide scrollbar for Chrome, Safari and Opera */
-  .gallery::-webkit-scrollbar {
-	display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .gallery {
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
-  }
-
-
+	} 
 	
+	.wrapper {
+		width: 100%;
+		display: grid;
+		
+		grid-template-columns: repeat(3, 33%);
+		grid-template-rows: repeat(auto-flow, 100%);
+		grid-auto-flow: row;
+		justify-items: center;
+		padding: none;
+	  }
+	  
+	  .box {
+		
+		margin: 5px;
+		font-size: 150%;
+		width: auto;
+		height: auto;
+		text-align: center;
+	  }
+	
+	  .box:hover {
+		cursor: pointer;
+		
+	  }
+	
+	  img {
+		width:100%;
+		height: 100%;
+		filter: grayscale(100%);
+		border-radius: 10%;
+		blend-mode: screen;
+	  }
+	
+	  #container::-webkit-scrollbar {
+		display: none;
+	  }
+	  
+	  /* Hide scrollbar for IE, Edge and Firefox */
+	  #container {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	  }
 
 }
 
@@ -300,106 +259,62 @@ box-shadow: -1px 1px 50px 2px rgba(255,255,255,0.45);
 
 #parent {
 	position: absolute;
-	width: 100%;
-	height: 100%;
 	z-index: -1;
-	padding: 0;
-	overflow: clip;
-	margin: 0px;
-
+	height: 100%;
+	width: 100%;
+	overflow:hidden;
 	
 	}
 
-	.right {
-		width: 50%;
-		height: 100%;
-		text-align: center;
-		float: right;
-		overflow: hidden;
-	}
-
-	.left {
-		width: 50%;
-		height:100%;
-		padding: none;
-		margin: none;
-		float:left;
-		overflow: hidden;
-	}
+#container{ 
+	height: 100%;
+	background-color: black 0;
+	overflow-y: scroll;
 	
-	.gallery{
-		background-image:url("/images/textures/txt9.png");
-		background-color: black;
-		border-left: 5px solid white;
-		border-right: 5px solid white;
+} 
 
-		width: 100%;
-		height: 100%;
-		overflow-y: scroll;
-		padding: 10px;
-		top: 0;
-		left: 0;
-		box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-	}
+.wrapper {
+	width: 100%;
+	display: grid;
+	
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: repeat(auto-flow, 100%);
+	grid-auto-flow: row;
+	justify-items: center;
+	padding: none;
+  }
+  
+  .box {
+	
+	margin: 50px;
+	font-size: 150%;
+	width: auto;
+	height: auto;
+	text-align: center;
+  }
 
-	.gallery img{ 
-		width:  100%;
-		height:  100%;
-		border-radius:;
-		transition: 0.5s; 
-	}
+  .box:hover {
+	cursor: pointer;
+	
+  }
 
-	.gallery img:hover{ 
-		cursor: pointer;
-		transform: scale(1.01);
-		transition: 0.5s; 
-	}
+  img {
+	width:100%;
+	height: 100%;
+	filter: grayscale(100%);
+	border-radius: 10%;
+	blend-mode: screen;
+  }
 
-	.grid {
-		display: grid;
-		place-items: center;
-		grid-template-columns: repeat(3, 1fr);
-		width:  100%;
-		height: 100%;
-		margin-bottom: 500px;
-		padding: 0;
-	  }
-
-	  .screen{
-		position: relative;
-		right:0;
-	  }
-
-	  #screen {
-		position: relative;
-		width: 95%;
-		height: 95%;
-		z-index: -10;
-	  }
-
-	  #buttn { 
-		position: fixed;
-		width: 15%;
-		height:15%;
-		left: 70%;
-		bottom: 8%;
-		z-index: 10;
-		border-radius: 10px;
-	  }
-
-	  #buttn:hover { 
-		cursor:pointer;
-	  }
-
-	  /* Hide scrollbar for Chrome, Safari and Opera */
-  .gallery::-webkit-scrollbar {
+  #container::-webkit-scrollbar {
 	display: none;
   }
   
   /* Hide scrollbar for IE, Edge and Firefox */
-  .gallery {
+  #container {
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
   }
-
+  
 }
+

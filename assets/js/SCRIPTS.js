@@ -1,65 +1,34 @@
-var container = document.getElementById("shapecontainer");
-var screen = document.getElementById("screen");
-var bttn = document.getElementById("buttn");
-var bttnstate = 0;
-var imgpth 
+var images = [];
+
+$.getJSON('/images/engravings', data => {
+
+  for (let i = 0; i < data.length; i++) {
+    var path = '/images/engravings/' + data[i]
+
+    const Wrapper = document.getElementById("wrapper");
+
+    
+
+    const iDiv = document.createElement('box')
+    const Image = document.createElement('img')
+    iDiv.id = "box"
+    iDiv.className = "box"
+    Image.src = path
 
 
+
+  iDiv.appendChild(Image);
+
+    Wrapper.appendChild(iDiv);
+
+
+
+
+
+  }
+  console.log(images);
+});
 
 function toggleMobileMenu(menu) { 
-    menu.classList.toggle('open');
-};
-
-function loadimg(toload) {
-
-    if (toload == 00) { 
-        screen.src = "images/assets/crt_intro.png";
-
-    };
-
-    if (toload == 01) {
-        screen.src = "images/assets/crt_01.png";
-    };
-
-    if (toload == 02) {
-        screen.src = "images/assets/crt_02.png";
-    };
-
-    if (toload == 03) {
-        screen.src = "images/assets/crt_03.png";
-    };
-
-    if (toload == 04) {
-        screen.src = "images/assets/crt_04.png";
-    };
-
-    if (toload == 05) {
-        screen.src = "images/assets/crt_05.png";
-    };
-
-    if (toload == 06) {
-        screen.src = "images/assets/crt_06.png";
-    };
-
-    if (toload == 07) {
-        screen.src = "images/assets/crt_07.png";
-    };
-
-    if (toload == 08) {
-        screen.src = "images/assets/crt_08.png";
-    };
-
-    if (toload == 09) {
-        screen.src = "images/assets/crt_09.png";
-    };
-
-    if (toload == 10) {
-        screen.src = "images/assets/crt_10.png";
-    };
-
-    if (toload == 11) {
-        screen.src = "images/assets/crt_11.png";
-    };
-
-
+  menu.classList.toggle('open');
 };
