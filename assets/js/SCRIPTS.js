@@ -9,10 +9,11 @@ var images = [];
 
 
 
-$.getJSON('main/', data => {
+$.getJSON('sublair.com/images/main/', data => {
 
   for (let i = 0; i < data.length; i++) {
-    var path = 'main/' + data[i];
+    var path = 'sublair.com/images/main/' + data[i];
+    window.alert(path);
 
     const Wrapper = document.getElementById("wrapper");
 
