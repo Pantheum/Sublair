@@ -9,10 +9,10 @@ var images = [];
 
 
 
-$.getJSON('images/main/', data => {
+$.getJSON('main/', data => {
 
   for (let i = 0; i < data.length; i++) {
-    var path = 'images/main/' + data[i];
+    var path = 'main/' + data[i];
 
     const Wrapper = document.getElementById("wrapper");
 
