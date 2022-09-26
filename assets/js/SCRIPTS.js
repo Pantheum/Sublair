@@ -1,4 +1,13 @@
+window.addEventListener('load', function () {
+  onLoad();
+})
+
+
+
+function onLoad(){
 var images = [];
+
+
 
 $.getJSON('images/main/', data => {
 
@@ -26,9 +35,13 @@ $.getJSON('images/main/', data => {
 
 
   }
-  console.log(images);
+  
 });
+
+
 
 function toggleMobileMenu(menu) { 
   menu.classList.toggle('open');
 };
+
+}
