@@ -6,14 +6,14 @@ window.addEventListener('load', function () {
 
 function onLoad(){
 var images = [];
+var folder = '/images/main/'
 
 
-
-$.getJSON('sublair.com/images/main/', data => {
+$.getJSON(folder, data => {
 
   for (let i = 0; i < data.length; i++) {
-    var path = 'sublair.com/images/main/' + data[i];
-    window.alert(path);
+    var path = folder + data[i];
+
 
     const Wrapper = document.getElementById("wrapper");
 
@@ -31,6 +31,8 @@ $.getJSON('sublair.com/images/main/', data => {
 
     Wrapper.appendChild(iDiv);
 
+    console.log(path);
+
 
 
 
@@ -46,3 +48,5 @@ function toggleMobileMenu(menu) {
 };
 
 }
+
+
