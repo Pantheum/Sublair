@@ -3,7 +3,7 @@ var images = [];
 $.getJSON('/images/engravings/', data => {
 
   for (let i = 0; i < data.length; i++) {
-    var path = '/images/engravings/' + data[i];
+    var path = 'images/engravings/' + data[i];
 
     const Wrapper = document.getElementById("wrapper");
 
