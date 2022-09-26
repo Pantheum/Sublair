@@ -1,6 +1,6 @@
 var images = [];
 
-$.getJSON('images/main', data => {
+$.getJSON('images/main/', data => {
 
   for (let i = 0; i < data.length; i++) {
     var path = 'images/main/' + data[i];
