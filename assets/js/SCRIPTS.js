@@ -4,28 +4,7 @@ window.addEventListener('load', function () {
 
 function onLoad(){
 
-var folder = '/images/main/'
-
-
-$.getJSON(folder, data => {
-
-  for (let i = 0; i < data.length; i++) {
-    var path = folder + data[i];
-
-
-    
-
-    
-
-
-
-
-
-  }
-  
-});
 };
-
 
 
 function toggleMobileMenu(menu) { 
