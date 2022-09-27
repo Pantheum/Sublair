@@ -2,8 +2,6 @@ window.addEventListener('load', function () {
   onLoad();
 })
 
-
-
 function onLoad(){
 var images = [];
 var folder = '/images/main/'
@@ -40,13 +38,10 @@ $.getJSON(folder, data => {
   }
   
 });
+};
 
 
 
 function toggleMobileMenu(menu) { 
   menu.classList.toggle('open');
 };
-
-}
-
-
