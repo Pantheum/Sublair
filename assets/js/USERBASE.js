@@ -25,6 +25,9 @@ const pathReference = ref(storage, 'images/');
 const listRef = ref(storage, 'images/');
 const filepaths = [];
 
+
+
+///// List references
 listAll(listRef)
   .then((res) => {
     res.prefixes.forEach((folderRef) => {
@@ -37,20 +40,15 @@ listAll(listRef)
   .then((url) => {
     // `url` is the download URL for 'images/stars.jpg'
 
-    // inserted into an <img> element
-
+    // creating div and attaching to main wrapper
     const Wrapper = document.getElementById("wrapper");
     const iDiv = document.createElement('box')
     const Image = document.createElement('img')
     iDiv.id = "box"
     iDiv.className = "box"
     Image.src = url
-
-
-
   iDiv.appendChild(Image);
-
-    Wrapper.appendChild(iDiv);
+  Wrapper.appendChild(iDiv);
     
   })
   .catch((error) => {
