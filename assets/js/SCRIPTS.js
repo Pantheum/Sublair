@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
 })
 
 function onLoad(){
-var images = [];
+
 var folder = '/images/main/'
 
 
@@ -13,23 +13,9 @@ $.getJSON(folder, data => {
     var path = folder + data[i];
 
 
-    const Wrapper = document.getElementById("wrapper");
-
     
 
-    const iDiv = document.createElement('box')
-    const Image = document.createElement('img')
-    iDiv.id = "box"
-    iDiv.className = "box"
-    Image.src = path
-
-
-
-  iDiv.appendChild(Image);
-
-    Wrapper.appendChild(iDiv);
-
-    console.log(path);
+    
 
 
 
