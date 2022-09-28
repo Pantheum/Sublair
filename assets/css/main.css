@@ -227,7 +227,7 @@ box-shadow: -1px 1px 50px 2px rgba(255,255,255,0.45);
 		width: auto;
 		height: auto;
 		text-align: center;
-		filter: blur(10px);
+		filter: blur(1000px);
 		transition: .3s;
 	  }
 	
@@ -294,17 +294,15 @@ box-shadow: -1px 1px 50px 2px rgba(255,255,255,0.45);
 	height: auto;
 	text-align: center;
 	border-radius: 10%;
-	filter: blur(10px);
-	transition: .3s;
+	filter: blur(1000px);
+	transition: .5s;
   }
 
   .box:hover {
 	cursor: pointer;
 	filter: blur(0px);
-	transition: .3s;
-	z-index: 100;
-
-	
+	transition: .5s;
+	z-index: 100;	
   }
 
   img {
