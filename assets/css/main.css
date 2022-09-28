@@ -8,12 +8,10 @@
 }
 
 body{ 
-	background-image: url("/images/textures/txt11.png");
-	background-size: 200px 100px;
 	background-color: BLACK;
 	color: white;
 	font-family: 'Times New Roman', Times, serif;
-	overflow-y:hidden;
+	overflow-y: hidden;
 }
 
 .li:before {
@@ -227,7 +225,7 @@ box-shadow: -1px 1px 50px 2px rgba(255,255,255,0.45);
 		width: auto;
 		height: auto;
 		text-align: center;
-		filter: blur(10px);
+		filter: blur(5px);
 		transition: .3s;
 	  }
 	
