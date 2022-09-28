@@ -21,9 +21,7 @@ const app = initializeApp(firebaseConfig);
 
 // file storage
 const storage = getStorage(app);
-const pathReference = ref(storage, 'images/');
 const listRef = ref(storage, 'images/');
-const filepaths = [];
 
 
 
@@ -42,12 +40,25 @@ listAll(listRef)
 
     // creating div and attaching to main wrapper
     const Wrapper = document.getElementById("wrapper");
-    const iDiv = document.createElement('box')
+    const iDiv = document.createElement('div')
+    const hoverDiv = document.createElement('div')
+    const inspect = document.createElement('i')
     const Image = document.createElement('img')
     iDiv.id = "box"
     iDiv.className = "box"
+
+    hoverDiv.id = "hover-menu"
+    hoverDiv.className = "hover-menu"
+
+    inspect.className = "fa-solid fa-window-maximize"
+
     Image.src = url
-  iDiv.appendChild(Image);
+
+    hoverDiv.appendChild(inspect);
+
+    iDiv.appendChild(Image); 
+   iDiv.appendChild(hoverDiv);
+  
   Wrapper.appendChild(iDiv);
     
   })
