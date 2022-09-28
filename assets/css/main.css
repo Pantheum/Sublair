@@ -8,7 +8,7 @@
 }
 
 body{ 
-	background-image: url("/images/textures/noise.gif");
+	background-image: url("/images/textures/txt11.png");
 	background-size: 200px 100px;
 	background-color: BLACK;
 	color: white;
@@ -226,7 +226,7 @@ box-shadow: -1px 1px 50px 2px rgba(255,255,255,0.45);
 		width: auto;
 		height: auto;
 		text-align: center;
-		filter: blur(250px);
+		filter: blur(10px);
 		transition: .3s;
 	  }
 	
@@ -291,7 +291,7 @@ box-shadow: -1px 1px 50px 2px rgba(255,255,255,0.45);
 	height: auto;
 	text-align: center;
 	border-radius: 10%;
-	filter: blur(1000px);
+	filter: blur(10px);
 	transition: .5s;
   }
 
