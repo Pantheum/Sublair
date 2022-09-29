@@ -56,8 +56,9 @@ listAll(listRef)
 
     hoverDiv.appendChild(inspect);
 
+    iDiv.appendChild(hoverDiv);
     iDiv.appendChild(Image); 
-   iDiv.appendChild(hoverDiv);
+    
   
   Wrapper.appendChild(iDiv);
     
