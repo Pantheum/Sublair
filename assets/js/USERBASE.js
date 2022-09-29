@@ -44,6 +44,7 @@ listAll(listRef)
     const hoverDiv = document.createElement('div')
     const inspect = document.createElement('i')
     const Image = document.createElement('img')
+
     iDiv.id = "box"
     iDiv.className = "box"
 
@@ -51,6 +52,7 @@ listAll(listRef)
     hoverDiv.className = "hover-menu"
 
     inspect.className = "fa-solid fa-window-maximize"
+    inspect.onclick = function() { moreDetails(url) }
 
     Image.src = url
 
