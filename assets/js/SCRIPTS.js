@@ -1,5 +1,9 @@
-const parent = document.getElementById("parent")
+const container = document.getElementById("container")
+const container2 = document.getElementById("container-2")
+const hires = document.getElementById("hires")
+
 var opacity = 0;
+var isActive = 0;
 
 
 
@@ -17,18 +21,27 @@ function onLoad(){
     opacity += .1;
     setTimeout(function(){onLoad()},50);
  }
-  parent.style.opacity = opacity;
+  container.style.opacity =  opacity;
 
 };
 
 
 function toggleMobileMenu(menu) { 
-  menu.classList.toggle('open');
+  menu.classList.toggle('open')
 };
 
 
 
 
-function moreDetails(obj){ 
-  console.log(obj)
+function openDetails(obj){ 
+  container.style.display = "none";
+  container2.style.display = "block";
+  hires.setAttribute( "src" , obj);
+
+
+};
+
+function closeDetails(){ 
+  container.style.display = "block";
+  container2.style.display = "none";
 };

@@ -52,7 +52,7 @@ listAll(listRef)
     hoverDiv.className = "hover-menu"
 
     inspect.className = "fa-solid fa-window-maximize"
-    inspect.onclick = function() { moreDetails(url) }
+    inspect.onclick = function() { openDetails(url) }
 
     Image.src = url
 
