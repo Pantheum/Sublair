@@ -27,3 +27,12 @@ export var soundHover = new Howl({
     volume: 0.6,
     rate: 1
   });
+
+
+
+
+
+  ///// ADDING SOUNDS TO DOM ELEMENTS
+
+  document.getElementById('navicons').onclick = function() { soundPrev.play(); }
+  document.getElementById('hamburger-icon').onclick = function() { soundNext.play(), toggleMobileMenu(this) }

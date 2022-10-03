@@ -86,4 +86,3 @@ listAll(listRef)
 
 
 
-  document.getElementById('navicons').onclick = function() { soundPrev.play(); }
