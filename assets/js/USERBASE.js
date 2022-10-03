@@ -4,6 +4,9 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-
 import { collection, getDocs, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
 import { query, orderBy, limit, where, onSnapshot } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
 import { getStorage, ref, getDownloadURL, listAll, getMetadata } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-storage.js";
+import { soundHover, soundNext, soundPrev } from "./sounds.js"
+
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -47,12 +50,15 @@ listAll(listRef)
 
     iDiv.id = "box"
     iDiv.className = "box"
+    iDiv.addEventListener('mouseenter', (event) => { soundHover.play() });
+   
 
     hoverDiv.id = "hover-menu"
     hoverDiv.className = "hover-menu"
 
+
     inspect.className = "fa-solid fa-window-maximize"
-    inspect.onclick = function() { openDetails(url) }
+    inspect.onclick = function() { soundNext.play(), openDetails(url) }
 
     Image.src = url
 
@@ -77,3 +83,7 @@ listAll(listRef)
   }).catch((error) => {
     console.log(error)
   });
+
+
+
+  document.getElementById('navicons').onclick = function() { soundPrev.play(); }
