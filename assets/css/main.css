@@ -578,7 +578,7 @@ ul li:hover {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: red;
+	background-color: none;
 	z-index: 100;
 	}
 
