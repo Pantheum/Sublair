@@ -38,10 +38,12 @@
 	<header>
 		<div id="brand"><img src="./images/LOGO.png" class="logo"> <a href="/">SUBLAIR</a></div> 
 		<nav>
+
 			<ul>
-				<a href="https://www.instagram.com/_mindfabric"><li><i class="fa-brands fa-instagram fa-2x"></i></li></a>
-							<a href="https://www.facebook.com/Xmindfabric"><li><i class="fa-brands fa-facebook fa-2x"></i></li></a>
-							<a href="https://twitter.com/_mindfabric"><li><i class="fa-brands fa-twitter fa-2x"></i></li></a>
+				<span class="accnt" id="accnt">
+				<i class="fa-solid fa-user fa-2x"></i>
+				</span>
+
 			</ul>
 
 			<ul>
@@ -55,13 +57,20 @@
 			<div class="bar3"></div>
 
 			<ul class = "mobile-menu">
-				<span class="menu-span">
-					<img src="images/OG.png"></img>
-						<span class="menu-socials">
+				
+				<button class="account" id="account">
+					CREATE ACCOUNT / <BR> LOGIN
+				</button>
 
-							<a href="https://www.instagram.com/_mindfabric"><li><i class="fa-brands fa-instagram fa-2x"></i></li></a>
-							<a href="https://www.facebook.com/Xmindfabric"><li><i class="fa-brands fa-facebook fa-2x"></i></li></a>
-							<a href="https://twitter.com/_mindfabric"><li><i class="fa-brands fa-twitter fa-2x"></i></li></a>
+				<span class="menu-span">
+
+					
+
+
+						<span class="menu-socials">
+							<a href="https://www.instagram.com/_mindfabric"><li><i class="fa-brands fa-instagram fa-1x"></i></li></a>
+							<a href="https://www.facebook.com/Xmindfabric"><li><i class="fa-brands fa-facebook fa-1x"></i></li></a>
+							<a href="https://twitter.com/_mindfabric"><li><i class="fa-brands fa-twitter fa-1x"></i></li></a>
 							
 
 						</span> 
@@ -82,6 +91,37 @@
 
 
 		<div id="parent">
+
+			<div class="loginform" id="loginform">
+
+
+				<div class="lf-container" id="lf-container">
+
+					<div class="lf-nav" id="lf-nav">
+						
+						<div class="lf-nav-head" id="lf-nav-head"> 
+							<h3>CREATE ACCOUNT / LOGIN</h3> 
+							
+						</div>
+						
+						</div>
+
+					<table>
+						<tr>
+						<th><i class="fa-brands fa-google fa-4x"></i></th>
+						<th><i class="fa-brands fa-facebook-f fa-4x"></i></th>
+						</tr>
+
+						<tr>
+							<th><i class="fa-brands fa-twitter fa-4x"></i></th>
+						<th><i class="fa-solid fa-envelope fa-4x"></i></th>
+
+						</tr>
+						</table>
+
+				</div> 
+				
+			</div>
 
 
 
@@ -108,6 +148,35 @@
 						</div>
 
 						</div>
+
+						<div class="tokens" id="tokens">
+
+							<table>
+							<tr>
+								<th> <i class="fa-solid fa-lock"></i></th>
+								<th> 0000000000</th>
+								<th> none </th> 
+
+							<tr>
+
+								<tr>
+									<th> <i class="fa-solid fa-lock"></i></th>
+									<th> 0000000000</th>
+									<th> none </th> 
+	
+								<tr>
+
+									<tr>
+										<th> <i class="fa-solid fa-lock"></i></th>
+										<th> 0000000000</th>
+										<th> none </th> 
+		
+									<tr>
+						
+							</table>
+
+
+						</div> 
 						
 				</div>
 
@@ -119,7 +188,11 @@
 
 		
 		<script src="assets/js/SCRIPTS.js"></script>
-		<script type = "module" src="assets/js/USERBASE.js"></script>
+
+		<script type = "module" src="assets/js/firebase/initialize.js"></script>
+		<script type = "module" src="assets/js/firebase/database.js"></script>
+		<script type = "module" src="assets/js/firebase/storage.js"></script>
+
 		<script type = "module" src="assets/js/sounds.js"></script>
 		
 		

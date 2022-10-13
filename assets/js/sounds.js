@@ -36,3 +36,8 @@ export var soundHover = new Howl({
 
   document.getElementById('navicons').onclick = function() { soundPrev.play(); }
   document.getElementById('hamburger-icon').onclick = function() { soundNext.play(), toggleMobileMenu(this) }
+
+
+  document.getElementById('accnt').addEventListener('mouseenter', (event) => { soundHover.play() });
+  document.getElementById('accnt').onclick = function() { soundNext.play(), showLogin()}
+  document.getElementById('account').onclick = function() { soundNext.play() }

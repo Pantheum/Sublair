@@ -1,6 +1,7 @@
 const container = document.getElementById("container")
 const container2 = document.getElementById("container-2")
 const hires = document.getElementById("hires")
+const form  = document.getElementById("loginform")
 
 var opacity = 0;
 var isActive = 0;
@@ -45,3 +46,7 @@ function closeDetails(){
   container.style.display = "block";
   container2.style.display = "none";
 };
+
+function showLogin(){ 
+  form.style.display = "block";
+}

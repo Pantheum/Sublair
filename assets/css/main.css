@@ -11,6 +11,7 @@ body{
 	background-color: BLACK;
 	color: white;
 	font-family: 'Times New Roman', Times, serif;
+	height: 100%;
 	overflow-y: hidden;
 }
 
@@ -20,7 +21,6 @@ body{
 	height: 100%;
 	z-index: 50;
 	pointer-events: none;
-	background-image: url("/images/textures/txt15.png");
 	opacity: .7;
 }
 
@@ -88,6 +88,7 @@ ul a{
 ul li{
 	padding:5px;
 	margin-left: 10px;
+	transition: .3s;
 }
 
 ul li:hover {
@@ -135,33 +136,34 @@ ul li:hover {
 .mobile-menu{
 	display: none;
 	position: absolute;
-	top: 50px;
+	top:49px;
 	left:0;
-	height: calc(100vh-50px);
+	height: 100%;
 	width: 100%;
-	border: 3px solid black;
+	
 	background-color: black;
 	margin: 0;
 	padding: 0;
-	
+}
+
+#account { 
+	position: absolute;
+	margin-top: 10vh ;
+	width: 75%;
+	background-color: black;
+	color: white;
+	border: 1px outset silver;
+	border-radius: 5px;
+	padding: 10px;
 }
 
 .menu-span {
-	border: 1px solid white;
-	margin-top: 10%;
-	width: 240px;
-	height: 240px;
+	margin-top: 87vh;
+	width: auto;
+	height: auto;
 	text-align: center;
-	background-image: url("/images/textures/txt1.png");
 	background-color: #191919;
 	border-radius: 25px;
-}
-
-.menu-span img { 
-	width: calc(100%/2);  
-	height: calc(100%/2);   
-	border-radius: 5%;
-	margin: 50px;
 }
 
 
@@ -173,17 +175,11 @@ ul li:hover {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	
-	
 	border: 1px solid white;
-	-webkit-box-shadow: -1px 1px 50px 2px rgba(255,255,255,0.45); 
-	box-shadow: -1px 1px 50px 2px rgba(255,255,255,0.45);
-	background-image: url("/images/textures/txt5.png");
 	background-color: #191919;
 	z-index: 101;
 
 }
-
 
 
 
@@ -211,6 +207,7 @@ ul li:hover {
 	margin: none;
 	}	
 
+	
 	#container{ 
 		opacity: 0;
 		height: 100%;
@@ -240,12 +237,10 @@ ul li:hover {
 		text-align: center;
 		border-bottom-left-radius: 10%;
 		border-bottom-right-radius: 10%;
-		transition: .3s;
 	  }
 	
 	  .box:hover {
 		cursor: pointer;
-		transition: .3s;
 		z-index: 100;	
 		border-left: 1px solid white;
 		border-right: 1px solid white;
@@ -257,7 +252,6 @@ ul li:hover {
 		width: 100%;
 		height: auto;
 		background-color: rgba(109, 109, 109, .3);
-		transition: .3s;
 		border: 1px solid white;
 		text-align: left;
 		z-index: 100;
@@ -266,13 +260,11 @@ ul li:hover {
 	  .hover-menu i{
 		opacity: .3; 
 		margin: 10px;
-		transition: .3s;
 		font-size: 18px;
 	  }
 	
 	  .hover-menu i:hover{
 		opacity: 1; 
-		transition: .3s;
 	  }
 	
 	
@@ -360,7 +352,6 @@ ul li:hover {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-image: url("./images/textures/txt14.png");
 		z-index: 100;
 		}
 	
@@ -391,7 +382,13 @@ ul li:hover {
 		height: 100%;
 	}
 
+	#tokens{ 
+		display: none;
+	}
+
 }
+
+
 
 
 
@@ -426,6 +423,70 @@ ul li:hover {
 	overflow:hidden;
 	}
 
+#loginform{ 
+	display: none;
+	position: absolute;
+	top: calc(100vh/3);
+	left: 50%;
+	width: 10%;
+	height: 20%;
+	border-left:1px solid white;
+	border-right:1px solid white;
+	border-top:1px solid white;
+	background-color: black;
+	z-index: 10000;
+	border-radius: 20px;
+	
+}
+
+#lf-nav{ 
+	width: 100%;
+	height: auto;
+	background-color: rgba(109, 109, 109, .3);
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
+}
+
+#lf-nav-head{ 
+	text-align: center;
+	font-size: 18px;
+	padding: 5px;
+
+}
+
+
+
+#lf-container{
+	width: auto;
+	height: 100%;
+}
+
+#lf-container table{
+	width: 100%; 
+	height: 100%;
+	
+}
+
+#lf-container th{
+	text-align: center;
+	border-bottom-left-radius:10px;
+	
+}
+
+
+
+#lf-container i{
+	padding: 10px;
+	transition: .3s;
+}
+
+#lf-container i:hover{
+	transform: scale(1.3);
+	cursor: pointer;
+	transition: .3s;
+}
+
 #container { 
 	opacity: 0;
 	height: 100%;
@@ -444,6 +505,7 @@ ul li:hover {
 	justify-items: center;
 	padding: none;
 	margin-bottom: 10%;
+	overflow: hidden;
   }
   
   .box {
@@ -572,20 +634,21 @@ ul li:hover {
 	height: 100%;
 	width: 100%;
 	margin: 0;
+	overflow-y: hidden;
 }
 
 #cardtexture{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: none;
+	background-color: none ;
 	z-index: 100;
 	}
 
 #card{ 
-	position: absolute;
-	top: 10%;
-	left: 25%;
+	display: block;
+	margin-top: 10%;
+	margin-left: 25%;
 	width: 50%;
 	height: auto;
 	border-radius: 10px;
@@ -593,9 +656,6 @@ ul li:hover {
 	text-align: center;
 	background-color: black;
 }
-
-
-
 
 #cardimg { 
 	margin-left: 25%;
@@ -608,6 +668,44 @@ ul li:hover {
 	width:100%;
 	height: 100%;
 }
+
+#tokens{ 
+	display: NONE;
+	width: 50%;
+	height: auto;
+	text-align: center;
+	top: 40%;
+	margin-left: 25%;
+	padding: 10px;
+	border:solid 1px white;
+}
+
+#tokens table{ 
+	width: 100%;
+	left: 0;
+	border: 1px solid white;
+
+}
+
+#tokens th{ 
+	padding:10px;
+}
+
+#accnt {
+	padding: 10px;
+	transition: .3s;
+}
+
+#accnt:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+	transition: .3s;
+}
+
+
+
+
+
 
 }
 
