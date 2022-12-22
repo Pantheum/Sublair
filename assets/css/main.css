@@ -438,7 +438,7 @@ ul li:hover {
 	margin-top: 10px;
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(5, 20%);
+	grid-template-columns: repeat(3, 33%);
 	grid-template-rows: repeat(auto-flow, 100%);
 	grid-auto-flow: row;
 	justify-items: center;
