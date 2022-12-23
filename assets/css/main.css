@@ -23,7 +23,7 @@ body{
 	z-index: 99999;
 	pointer-events: none;
 	background-image: url("/images/textures/NOISE.png");
-	opacity: 100;
+	opacity: .5;
 }
 
 
