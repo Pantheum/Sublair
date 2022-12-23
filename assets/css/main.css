@@ -9,7 +9,7 @@
 
 body{ 
 	background-image: url(/images/textures/hex.png);
-	background-size: 100px;
+	background-size: 50px;
 	background-color: BLACK;
 	color: white;
 	font-family: 'Times New Roman', Times, serif;
@@ -225,7 +225,7 @@ ul li:hover {
 		margin-top: 10px;
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(3, 33%);
+		grid-template-columns: repeat(1, 100%);
 		grid-template-rows: repeat(auto-flow, 100%);
 		grid-auto-flow: row;
 		justify-items: center;
