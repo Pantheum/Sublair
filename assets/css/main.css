@@ -292,6 +292,7 @@ ul li:hover {
 	  }
 	
 	  img {
+		border-radius: 13%;
 		padding: 10%;
 		width:100%;
 		height: 100%;
@@ -369,26 +370,24 @@ ul li:hover {
 	#card{ 
 		position: absolute;
 		top: 10%;
-		left: 5%;
-		width: 90%;
+		width: 100%;
 		height: auto;
-		border-radius: 10px;
-		border: 1px outset gray;
 		text-align: center;
-		background-color: black;
+		
+		
 	}
 	
 	
 	
 	
 	#cardimg { 
-		margin-left: 25%;
-		width: 50%;
-		height: 25%;
+		width: 100%;
+		height: auto;
 		
 	}
 	
 	#cardimg img{
+		border-radius: 13%;
 		width:100%;
 		height: 100%;
 	}
@@ -510,6 +509,7 @@ ul li:hover {
 	width:100%;
 	height: 100%;
 	filter: grayscale(100%);
+	border-radius: 13%;
 	
   }
 
@@ -584,31 +584,27 @@ ul li:hover {
 	z-index: 100;
 	}
 
-#card{ 
+#card { 
 	position: absolute;
 	top: 10%;
-	left: 25%;
-	width: 50%;
-	height: auto;
-	border-radius: 10px;
-	border: 1px outset gray;
+	width: 100%;
+	height: 100%;
 	text-align: center;
-	background-color: black;
 }
 
 
 
 
-#cardimg { 
-	margin-left: 25%;
-	width: 50%;
-	height: 25%;
+#cardimg {
+	width: 100%;
+	height: auto;
 	
 }
 
 #cardimg img{
 	width:100%;
 	height: 100%;
+	border-radius: 13%;
 }
 
 }
