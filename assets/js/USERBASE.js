@@ -36,9 +36,15 @@ listAll(listRef)
       // You may call listAll() recursively on them.
     });
     res.items.forEach((itemRef) => {
+
+      getMetadata(ref(storage, itemRef)).then ((data)=> {
+        const name = data.name
+    });
+      
       
         getDownloadURL(ref(storage, itemRef))
   .then((url) => {
+    
     // `url` is the download URL for 'images/stars.jpg'
 
     // creating div and attaching to main wrapper
@@ -62,8 +68,11 @@ listAll(listRef)
 
     Image.src = url
 
-    hoverDiv.appendChild(inspect);
+    
 
+    
+    
+    hoverDiv.appendChild(inspect);
     iDiv.appendChild(hoverDiv);
     iDiv.appendChild(Image); 
     
@@ -75,14 +84,14 @@ listAll(listRef)
     // Handle any errors
   });
 
-
-
-
-
     });
   }).catch((error) => {
     console.log(error)
   });
+
+
+
+
 
 
 

@@ -454,7 +454,6 @@ ul li:hover {
 	text-align: center;
 	border-bottom-left-radius: 10%;
 	border-bottom-right-radius: 10%;
-	filter: blur(10px);
 	transition: .5s;
 	pointer-events: fill;
   }
