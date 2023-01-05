@@ -24,22 +24,19 @@ const app = initializeApp(firebaseConfig);
 
 // file storage
 const storage = getStorage(app);
-const listRef = ref(storage, 'images/');
+const products = ref(storage, 'images/');
+const banner = ref(storage, 'banner/');
 
 
 
 ///// List references
-listAll(listRef)
+listAll(products)
   .then((res) => {
     res.prefixes.forEach((folderRef) => {
       // All the prefixes under listRef.
       // You may call listAll() recursively on them.
     });
     res.items.forEach((itemRef) => {
-
-      getMetadata(ref(storage, itemRef)).then ((data)=> {
-        const name = data.name
-    });
       
       
         getDownloadURL(ref(storage, itemRef))

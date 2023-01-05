@@ -1,0 +1,18 @@
+h5 {
+    display: inline-block;
+    padding: 10px;
+    background: #282828;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .main-banner{ 
+    border: none;
+    overflow: hidden;
+  }
