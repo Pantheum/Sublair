@@ -48,7 +48,7 @@ listAll(products)
     const Wrapper = document.getElementById("wrapper");
     const iDiv = document.createElement('div')
     const hoverDiv = document.createElement('div')
-    const inspect = document.createElement('i')
+    const inspect = document.createElement('button')
     const Image = document.createElement('img')
 
     iDiv.id = "box"
@@ -60,7 +60,7 @@ listAll(products)
     hoverDiv.className = "hover-menu"
 
 
-    inspect.className = "fa-solid fa-window-maximize"
+    inspect.innerHTML = "View Item"
     inspect.onclick = function() { soundNext.play(), openDetails(url) }
 
     Image.src = url
