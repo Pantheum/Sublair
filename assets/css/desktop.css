@@ -1,5 +1,12 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+
+
+*{
+	font-family: 'Gideon Roman', cursive;
+}
+
 
 
 /* BIG SCREEN */
