@@ -34,7 +34,7 @@
 	} 
 	
 	.wrapper {
-		margin-top: 10px;
+		margin-top: 200px;
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(1, 100%);
@@ -44,6 +44,19 @@
 		padding: none;
 		margin-bottom: 10%;
 	  }
+
+	  .wrapper-3 {
+		margin-top: 200px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(1, 100%);
+		grid-template-rows: repeat(auto-flow, 100%);
+		grid-auto-flow: row;
+		justify-items: center;
+		padding: none;
+		margin-bottom: 10%;
+	  }
+	  
 	  
 	  .box {
 		
@@ -217,11 +230,34 @@
 	#nav{ 
 		position: absolute;
 		width: 100%;
-		background-color: rgba(109, 109, 109, .3);
+		background-color: #282828;
 		height: auto;
 		border: 1px solid white;
 		z-index: 100;
 	}
+
+	#shopnav {
+		width: 100%;
+		text-align: center;
+		
+		}
+		
+		
+		#nav table{ 
+			text-align: center;
+			width: 100%;
+			font-size: 22px;
+			margin: none;
+		}
+		
+		#nav td{ 
+			padding: 10px;
+		}
+		
+		#nav td:hover{ 
+			cursor: pointer;
+			background-color: #383838;
+		}
 	
 	#navicons{ 
 		left: 0;

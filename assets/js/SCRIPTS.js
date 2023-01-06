@@ -1,5 +1,11 @@
 const container = document.getElementById("container")
 const container2 = document.getElementById("container-2")
+
+const wrpper = document.getElementById("wrapper");
+const wrpper3 = document.getElementById("wrapper-3");
+
+
+
 const hires = document.getElementById("hires")
 
 var opacity = 0;
@@ -46,6 +52,19 @@ function closeDetails(){
   container2.style.display = "none";
 };
 
+
+
+function physicalTab(){
+  wrpper.style.display = "grid"
+  wrpper3.style.display ="none"
+
+}
+
+function digitalTab(){
+  wrpper.style.display = "none"
+  wrpper3.style.display = "grid"
+
+}
 
 
 

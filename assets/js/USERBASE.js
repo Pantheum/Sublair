@@ -24,13 +24,13 @@ const app = initializeApp(firebaseConfig);
 
 // file storage
 const storage = getStorage(app);
-const products = ref(storage, 'images/');
-const banner = ref(storage, 'banner/');
+const physical = ref(storage, 'images/PHYSICAL/');
+const digital = ref(storage, 'images/DIGITAL/');
 
 
 
-///// List references
-listAll(products)
+///// physical images
+listAll(physical)
   .then((res) => {
     res.prefixes.forEach((folderRef) => {
       // All the prefixes under listRef.
@@ -42,10 +42,75 @@ listAll(products)
         getDownloadURL(ref(storage, itemRef))
   .then((url) => {
     
-    // `url` is the download URL for 'images/stars.jpg'
+    // `url` is the download URL for 'images/PHYSICAL/image.jpg'
 
     // creating div and attaching to main wrapper
     const Wrapper = document.getElementById("wrapper");
+    const iDiv = document.createElement('div')
+    const hoverDiv = document.createElement('div')
+    const inspect = document.createElement('button')
+    const Image = document.createElement('img')
+
+    iDiv.id = "box"
+    iDiv.className = "box"
+    iDiv.addEventListener('mouseenter', (event) => { soundHover.play() });
+   
+
+    hoverDiv.id = "hover-menu"
+    hoverDiv.className = "hover-menu"
+
+
+    inspect.innerHTML = "View Item"
+    inspect.onclick = function() { soundNext.play(), openDetails(url) }
+
+    Image.src = url
+
+    
+
+    
+    
+    hoverDiv.appendChild(inspect);
+    iDiv.appendChild(hoverDiv);
+    iDiv.appendChild(Image); 
+    
+  
+  Wrapper.appendChild(iDiv);
+    
+  })
+  .catch((error) => {
+    // Handle any errors
+  });
+
+    });
+  }).catch((error) => {
+    console.log(error)
+  });
+
+  
+
+
+
+
+
+
+
+
+  listAll(digital)
+  .then((res) => {
+    res.prefixes.forEach((folderRef) => {
+      // All the prefixes under listRef.
+      // You may call listAll() recursively on them.
+    });
+    res.items.forEach((itemRef) => {
+      
+      
+        getDownloadURL(ref(storage, itemRef))
+  .then((url) => {
+    
+    // `url` is the download URL for 'images/PHYSICAL/image.jpg'
+
+    // creating div and attaching to main wrapper
+    const Wrapper = document.getElementById("wrapper-3");
     const iDiv = document.createElement('div')
     const hoverDiv = document.createElement('div')
     const inspect = document.createElement('button')
