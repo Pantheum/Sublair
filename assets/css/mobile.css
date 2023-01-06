@@ -48,7 +48,7 @@
 	  .wrapper-3 {
 		margin-top: 200px;
 		width: 100%;
-		display: grid;
+		display: none;
 		grid-template-columns: repeat(1, 100%);
 		grid-template-rows: repeat(auto-flow, 100%);
 		grid-auto-flow: row;
