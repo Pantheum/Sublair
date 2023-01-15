@@ -20,7 +20,7 @@ const paypalButtonsComponent = paypal.Buttons({
     // set up the transaction
     createOrder: (data, actions) => {
         const x = item.innerHTML
-        const y = ".10"
+        const y = "44.44"
 
 
         // pass in any options from the v2 orders create call:
