@@ -83,7 +83,7 @@ function opendetailsClothing(obj){
   
   filePath.style.display = "none"
   
-
+  
   about.innerHTML = "This fragment was harvested by the <a href= https://www.instagram.com/_mindfabric>Mind Fabric</a> using compound fractal algorithms. They are being sold and distributed on the Sublair. Once purchased, this 1:1 fragment shall be removed from the public ledger, assigned an identification number and shipped to your location. Choose wisely for this affects the rest of your existance here within the Sublair. Thank you."
 
   itemDesc.innerHTML = "1:1 <br> Physical Print <br> 13 inch. x 19 inch."
