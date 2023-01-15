@@ -14,7 +14,7 @@ const paypalButtonsComponent = paypal.Buttons({
     style: {
       color: "black",
       shape: "rect",
-      layout: "horizontal"
+      layout: "vertical"
     },
 
     // set up the transaction
