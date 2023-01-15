@@ -58,13 +58,34 @@
 
 	</head>
 
-	<div class="screentexture" id="screentexture">
-	</div>
+	
+
+
+	<div id="noti" class="noti">
+		<div id="notibox" class="notibox">
+			<h1 class="notiTitle" id="notiTitle"></h1>
+		<h5 class="notiDesc" id="notiDesc"></h5>
+
+		<button onclick=location.reload()>S U B L A I R</button>
+			</div>
+			
+		</div>
+
+		<div class="screentexture" id="screentexture">
+		</div>
+
+	
 
 
 	<header>
 
+		<audio src="/sounds/texture.mp3" class="audio" id="audio" autoplay>
+</audio>
+
+
+
 		<div id="brand"><img src="./images/LOGO.png" class="logo"> <a href="/">SUBLAIR</a></div> 
+
 		<nav>
 			<ul>
 				<a href="https://www.instagram.com/_mindfabric"><li><i class="fa-brands fa-instagram fa-2x"></i></li></a>
@@ -108,26 +129,24 @@
 	
 	<body>
 
-
-
 		
-		
-
-
-
 
 		<div id="parent">
 
+			
 
 
-			<div class="splash" id="splash">
-					<img src="/images/LOGO.png">
-					<p> SUBLAIR </p > 
-					<P>THE LAIR WITHIN.</P> 
-					<button onClick="document.getElementById('container').scrollIntoView();">  Shop now </button>
-			</div>
+
+			
 
 			<div class="main-banner" id="main-banner">
+
+				<div class="splash" id="splash">
+					<img src="/images/LOGO.png">
+					<h1> SUBLAIR </h1 > 
+					<h3>THE LAIR WITHIN.</h3> 
+					<button onClick="document.getElementById('container').scrollIntoView();">  Browse Fragments </button>
+			</div>
 
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
@@ -196,10 +215,11 @@
 
 					<div class="shopnav" id="shopnav" >
 					<h4>SUBLAIR</h4>
+					<h4 class="fragCount" id="fragCount"></h4>
 					<table>
 						<tr>
-							<td onclick="physicalTab()">   Physical Lair </td>
-							<td onclick="digitalTab()" >  Digital Lair </td>
+							<td onclick="printsTab()" >  PUBLIC LEDGER </td>
+							
 						</tr>
 						</table>
 						</div>
@@ -208,9 +228,11 @@
 				</div>
 
 				<div class="wrapper" id="wrapper">
+					FORTHCOMING...
 				  </div>
 
 				  <div class="wrapper-3" id="wrapper-3">
+
 				</div>
 
 				 
@@ -228,11 +250,32 @@
 
 					<div id="card">
 
-						<div id= "cardtexture"></div>
-
 						<div id="cardimg">
-						<img id="hires"></img> 
+							
+							
+							
+							
+						
+
+						
+							<img id="hires">
+							<div class="paypal-button-container" id="paypal-button-container"></div>
+						
+
+						
+
+						
+							<h1 class="itemDesc" id="itemDesc"></h1>
+							<h1  class="Price" id="Price" > </h1>
+							<p class="filePath" id="filePath"></p>
+						
+						<h4 class="about" id="about"></h4>
+						
 						</div>
+
+						
+
+						
 
 						</div>
 						
@@ -248,6 +291,11 @@
 		<script src="assets/js/SCRIPTS.js"></script>
 		<script type = "module" src="assets/js/USERBASE.js"></script>
 		<script type = "module" src="assets/js/sounds.js"></script>
+
+
+		<!--  PAYPAL -->
+		<script src="https://www.paypal.com/sdk/js?client-id=AUE7HBOsAEBXN2Zh6BFlfq7a_lfd3c991ZptfBKJaQm7kGlPtHniVss0lE_FMAnfii9-3xMJ-ada_hGR&currency=USD&intent=capture&enable-funding=venmo" data-sdk-integration-source="integrationbuilder"></script>
+		<script type = "module" src="assets/js/paypal.js"></script>
 		
 		
 

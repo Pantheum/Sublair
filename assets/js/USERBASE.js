@@ -3,7 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
 import { collection, getDocs, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
 import { query, orderBy, limit, where, onSnapshot } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
-import { getStorage, ref, getDownloadURL, listAll, getMetadata } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-storage.js";
+import { getStorage, ref, getDownloadURL, listAll, getMetadata, deleteObject } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-storage.js";
 import { soundHover, soundNext, soundPrev } from "./sounds.js"
 
 
@@ -24,13 +24,13 @@ const app = initializeApp(firebaseConfig);
 
 // file storage
 const storage = getStorage(app);
-const physical = ref(storage, 'images/PHYSICAL/');
-const digital = ref(storage, 'images/DIGITAL/');
+const CLOTHING = ref(storage, 'images/CLOTHING/');
+const PRINTS = ref(storage, 'images/PRINTS/');
 
 
 
-///// physical images
-listAll(physical)
+//////CLOTHING
+listAll(CLOTHING)
   .then((res) => {
     res.prefixes.forEach((folderRef) => {
       // All the prefixes under listRef.
@@ -61,7 +61,7 @@ listAll(physical)
 
 
     inspect.innerHTML = "View Item"
-    inspect.onclick = function() { soundNext.play(), openDetails(url) }
+    inspect.onclick = function() { soundNext.play(), opendetailsClothing(url) }
 
     Image.src = url
 
@@ -89,71 +89,136 @@ listAll(physical)
   
 
 
+  
 
 
 
+  //////PRINTS
 
 
+  var fragCount = 0;
+  var fragLabel = document.getElementById("fragCount");
 
-  listAll(digital)
+export function listPrints(){ 
+
+  const Wrapper = document.getElementById("wrapper-3");
+  Wrapper.innerHTML = "";
+
+
+  listAll(PRINTS)
   .then((res) => {
-    res.prefixes.forEach((folderRef) => {
-      // All the prefixes under listRef.
-      // You may call listAll() recursively on them.
-    });
+    
     res.items.forEach((itemRef) => {
-      
-      
-        getDownloadURL(ref(storage, itemRef))
-  .then((url) => {
-    
-    // `url` is the download URL for 'images/PHYSICAL/image.jpg'
+      fragCount ++;
 
-    // creating div and attaching to main wrapper
-    const Wrapper = document.getElementById("wrapper-3");
-    const iDiv = document.createElement('div')
-    const hoverDiv = document.createElement('div')
-    const inspect = document.createElement('button')
-    const Image = document.createElement('img')
-
-    iDiv.id = "box"
-    iDiv.className = "box"
-    iDiv.addEventListener('mouseenter', (event) => { soundHover.play() });
-   
-
-    hoverDiv.id = "hover-menu"
-    hoverDiv.className = "hover-menu"
-
-
-    inspect.innerHTML = "View Item"
-    inspect.onclick = function() { soundNext.play(), openDetails(url) }
-
-    Image.src = url
-
-    
-
-    
-    
-    hoverDiv.appendChild(inspect);
-    iDiv.appendChild(hoverDiv);
-    iDiv.appendChild(Image); 
-    
+  // creating div and attaching to main wrapper
+  const Wrapper = document.getElementById("wrapper-3");
+  const iDiv = document.createElement('div')
+  const hoverDiv = document.createElement('div')
+  const inspect = document.createElement('button')
+  const Image = document.createElement('img')
   
-  Wrapper.appendChild(iDiv);
-    
+  
+
+  iDiv.id = "box"
+  iDiv.className = "box"
+  iDiv.addEventListener('mouseenter', (event) => { soundHover.play() });
+
+  getMetadata(ref(storage, itemRef))
+  .then((metadata) => {
+
+  Image.alt = metadata.fullPath
   })
   .catch((error) => {
     // Handle any errors
   });
+
+
+  
+ 
+
+  hoverDiv.id = "hover-menu"
+  hoverDiv.className = "hover-menu"
+
+  
+
+  
+  getDownloadURL(ref(storage, itemRef))
+  .then((url) => {
+  Image.src = url;
+  })
+  .catch((error) => {
+    // Handle any errors
+  });
+
+
+
+  
+
+
+
+
+  inspect.innerHTML = "View Fragment"
+  inspect.onclick = function() { soundNext.play(), opendetailsPrints(Image.src, Image.alt,  ) }
+
+  
+
+  
+
+  
+  
+  hoverDiv.appendChild(inspect);
+  iDiv.appendChild(hoverDiv);
+  iDiv.appendChild(Image); 
+  
+
+Wrapper.appendChild(iDiv);
+
+
+
+if (fragCount > 0) {
+  fragLabel.innerHTML  = fragCount + " : 50 <br> Fragments remain"
+  fragLabel.style.color = "white"
+} 
+
+
+    
+
+
 
     });
   }).catch((error) => {
     console.log(error)
   });
 
+}
+listPrints();
+if (fragCount == 0){
+  fragLabel.innerHTML = "SOLD OUT"
+  fragLabel.style.color = "red"
+}
 
 
 
+ 
+
+   export function deleteFile (product){ 
+  
+    const delRef = ref(storage, product);
+
+    // Delete the file
 
 
+deleteObject(delRef).then(() => {
 
+  console.log("file deleted")
+
+}).catch((error) => {
+  console.log(error);
+});
+
+
+  }
+
+
+  

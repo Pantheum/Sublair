@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
 
 *{ 
+	
 	padding:0;
 	margin: 0;
 	box-sizing: border-box;
@@ -21,8 +22,8 @@ body{
 	height: 100%;
 	z-index: 99999;
 	pointer-events: none;
-	background-image: url("/images/textures/NOISE.png");
-	opacity: .5;
+	background-image: url(/images/textures/static_gif.gif);
+	opacity: .1;
 }
 
 
@@ -47,8 +48,8 @@ header {
 	height: 50px;
 	display: flex;
 	justify-content: space-between;
-	
 	z-index: 1;
+	
 }
 
 .logo {
@@ -72,6 +73,7 @@ header {
 
 
 ul{
+	
 	margin: 10px ;
 	list-style: none;
 	height:  100%;
@@ -153,7 +155,7 @@ ul li:hover {
 	width: 240px;
 	height: 240px;
 	text-align: center;
-	background-image: url("/images/textures/txt1.png");
+	background-image: url("/images/textures/txt12.png");
 	background-color: #191919;
 	border-radius: 25px;
 }

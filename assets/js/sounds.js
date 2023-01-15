@@ -32,6 +32,7 @@ export var soundHover = new Howl({
 
 
 
+
   ///// ADDING SOUNDS TO DOM ELEMENTS
 
   document.getElementById('navicons').onclick = function() { soundPrev.play(); }
