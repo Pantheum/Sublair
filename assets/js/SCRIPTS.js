@@ -65,9 +65,6 @@ function opendetailsClothing(obj){
 
 
 
-
-
-
  function opendetailsPrints(obj, name){ 
 
 
