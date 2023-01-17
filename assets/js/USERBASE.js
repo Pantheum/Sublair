@@ -192,11 +192,16 @@ if (fragCount > 0) {
   });
 
 }
-listPrints();
+
 if (fragCount == 0){
   fragLabel.innerHTML = "SOLD OUT"
   fragLabel.style.color = "red"
 }
+
+
+
+
+listPrints();
 
 
 

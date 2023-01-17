@@ -2,6 +2,7 @@
 
 
 const parent = document.getElementById("parent");
+const mainBanner=document.getElementById("main-banner")
 
 const container = document.getElementById("container")
 const container2 = document.getElementById("container-2")
@@ -36,7 +37,16 @@ window.addEventListener('load', function () {
 })
 
 
+function initialize(){ 
+
+  container.style.display="block"
+  mainBanner.style.display = "none" ;
+  document.getElementById('container').scrollIntoView();
+
+}
+
 function onLoad(){
+
   
   if (opacity<1) {
     opacity += .1;

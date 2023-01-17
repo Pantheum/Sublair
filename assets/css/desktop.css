@@ -25,6 +25,7 @@
 	}
 
 #container { 
+	display: none;
 	opacity: 0;
 	height: 100%;
 	background-color: black 0;
@@ -59,12 +60,9 @@
   }
   
   .box {
-	margin: none;
-	width: auto;
+	width: 75%;
 	height: auto;
 	text-align: center;
-	border-bottom-left-radius: 10%;
-	border-bottom-right-radius: 10%;
 	transition: .5s;
 	pointer-events: fill;
   }
@@ -138,7 +136,10 @@
 	
 }
 
+
+
 #nav{ 
+	
 	position: absolute;
 	width: 100%;
 	background-color: #282828;
@@ -156,14 +157,13 @@
 #shopnav {
 width: 100%;
 text-align: center;
-
 }
 
 
 #nav table{ 
 	text-align: center;
 	width: 100%;
-	font-size: 18px;
+	font-size: 12px;
 	margin: none;
 }
 
