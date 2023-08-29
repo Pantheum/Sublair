@@ -1,5 +1,5 @@
 /* Style Settings */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300&family=Roboto+Mono:wght@100&display=swap');
 
 @font-face {
     font-family: 'ROM';
@@ -13,9 +13,9 @@
 
 
 :root {
-    --bgColor: #282828;
+    --bgColor: black;
     --accentColor: white;
-    --font: 'roboto', sans-serif;
+    --font:'Phudu', cursive;
 }
 
 
