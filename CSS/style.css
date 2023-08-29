@@ -7,11 +7,10 @@
     font-weight: normal;
     font-style: normal;
   }
+*{
+    margin: 0
+}
 
-  *{
-    margin:0;
-    padding: 0;
-  }
 
 :root {
     --bgColor: #282828;
@@ -35,10 +34,16 @@ body{
 }
 
 #userPhoto{
+
+   
+    display: grid;
+    place-items: center;
+    padding: 50px;
+}
+
+#userPhoto img{
     width: 200px;
     height: 200px;
-    display: block;
-    margin: 35px auto 20px;
     border-radius: 50%;
     border: 3px solid white;
 }
