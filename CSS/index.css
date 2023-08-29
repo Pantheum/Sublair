@@ -1,0 +1,47 @@
+/* Style Settings */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/FONTS/LessPerfectDOSVGA.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+*{
+    margin: 0
+}
+
+
+:root {
+    --bgColor: black;
+    --accentColor: white;
+    --font: 'ROM', sans-serif;
+}
+
+
+
+body{
+    background-color: var(--bgColor);
+}
+
+#tag{
+    text-align: center;
+   width: 100%;
+    font-family: var(--font);
+    color: white;
+    font-size: 16px;
+    
+}
+
+#userPhoto{
+
+   
+    display: grid;
+    place-items: center;
+    padding: 50px;
+}
+
+#userPhoto img{
+    width: 200px;
+    height: 200px;
+}
