@@ -1,5 +1,5 @@
 /* Style Settings */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 
 @font-face {
     font-family: 'ROM';
@@ -15,7 +15,7 @@
 :root {
     --bgColor: #282828;
     --accentColor: white;
-    --font: 'ROM', sans-serif;
+    --font: 'roboto', sans-serif;
 }
 
 
