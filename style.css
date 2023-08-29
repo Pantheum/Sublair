@@ -1,7 +1,7 @@
 /* Style Settings */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
 :root {
-    --bgColor:#000;
+    --bgColor:#282828;
     --accentColor: #E6E6E6;
     --font: 'Montserrat', sans-serif;
 }
@@ -71,3 +71,4 @@ body{
     background-color: var(--bgColor);
     color: var(--accentColor);
 }
+
